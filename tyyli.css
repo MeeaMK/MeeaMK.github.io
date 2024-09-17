@@ -1,0 +1,33 @@
+
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 17px;
+}
+    
+h1 {
+    font-size: 70px;
+    font-family: 'Architects Daughter', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: 'Architects Daughter', Arial, sans-serif;
+ 
+}
+header{
+    text-align: center;
+    padding-top: 30px;
+}
+#alisivut{
+    background-image:url(rätt2.jpg);
+}
+
+nav {
+    font-size: 25px;
+    font-family: 'Architects Daughter', Arial, sans-serif;
+}
+img {
+    width: 70%;
+    height: auto;
+}
