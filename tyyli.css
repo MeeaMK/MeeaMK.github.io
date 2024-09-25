@@ -125,12 +125,6 @@ figure {
     grid-template-columns: 2fr 1fr;
 }
 
-#paasivu {
-    grid-template-areas:
-        'g3 g1'
-        'g2 g4';
-    margin-bottom: 0px;
-}
 
 .paateksti {
     margin-bottom: 0px;
@@ -186,4 +180,47 @@ footer {
   .fa-envelope-o {
     color: #595959;
     width: 120px;
+  }
+
+
+  /* MOBIILIKOKO */
+
+  @media (max-width: 600px) {
+
+    #paasivu {
+        grid-template-areas:
+            'g3'
+            'g1'
+            'g4'
+            'g2';
+        margin-bottom: 0px;
+    }
+
+  }
+
+  /* TABLETTIKOKO */
+
+  @media screen and (min-width: 600px) {
+
+    #paasivu {
+        grid-template-areas:
+            'g3'
+            'g1'
+            'g4'
+            'g2';
+        margin-bottom: 0px;
+    }
+  }
+
+  /* KONEKOKO */
+
+  @media screen and (min-width: 1200px) {
+
+    #paasivu {
+        grid-template-areas:
+            'g3 g1'
+            'g2 g4';
+        margin-bottom: 0px;
+    }
+
   }
