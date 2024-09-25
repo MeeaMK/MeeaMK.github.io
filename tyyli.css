@@ -1,19 +1,26 @@
 
+@font-face {
+    font-family: otsikot;
+    src: url(ArchitectsDaughter-Regular.ttf);
+}
+@font-face {
+    font-family: leipäteksti;
+    src: url(static/Montserrat-Regular.ttf);
+}
 
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'leipäteksti', sans-serif;
     font-size: 17px;
 }
     
 h1 {
+    font-family: 'otsikot', sans-serif;
     font-size: 70px;
-    font-family: 'Architects Daughter', Arial, sans-serif;
 }
 
 h2 {
+    font-family: 'otsikot', sans-serif;
     font-size: 25px;
-    font-family: 'Architects Daughter', Arial, sans-serif;
- 
 }
 header{
     text-align: center;
