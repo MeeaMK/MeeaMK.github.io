@@ -9,12 +9,12 @@
 }
 
 body {
-    font-family: 'leipäteksti', sans-serif;
+    font-family: leipäteksti, sans-serif;
     font-size: 17px;
 }
     
 h1 {
-    font-family: 'otsikot', sans-serif;
+    font-family: otsikot, sans-serif;
     font-size: 70px;
 }
 
