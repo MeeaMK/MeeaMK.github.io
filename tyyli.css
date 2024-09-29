@@ -28,6 +28,11 @@ h1 {
     margin: 0px;
 }
 
+h1 a {
+    color: #262626;
+    text-decoration: none;
+}
+
 h2 {
     font-family: 'otsikot', sans-serif;
     font-size: 25px;
@@ -36,7 +41,7 @@ h2 {
 
 /* HEADER ja NAV BAR*/
 
-header{
+header {
     text-align: center;
     padding-top: 15px;
 }
@@ -117,8 +122,39 @@ figure {
 
 /* GRID - PALVELUTSIVU */
 
-.grid-kuva3 { grid-area: g5; }
-.grid-kuva4 { grid-area: g6; }
+.grid-palvelukuva1 { grid-area: gp1; }
+.grid-palvelukuva2 { grid-area: gp2; }
+.grid-palvelukuva3 { grid-area: gp3; }
+.grid-palvelukuva4 { grid-area: gp4; }
+
+.grid-palveluteksti1 {
+    grid-area: gp5;
+    padding: 25px;
+    text-align: left;
+}
+
+.grid-palveluteksti2 {
+    grid-area: gp6;
+    padding: 25px;
+    text-align: right;
+}
+
+.grid-palveluteksti3 {
+    grid-area: gp7;
+    padding: 25px;
+    text-align: left;
+}
+
+.grid-palveluteksti4 {
+    grid-area: gp8;
+    padding: 25px;
+    text-align: right;
+}
+
+.palveluteksti {
+    margin-bottom: 0px;
+    line-height: 2;
+}
 
 
 /* FOOTER */
@@ -198,6 +234,18 @@ footer {
         margin: 0 auto;
      
     }
+
+    #palvelutsivu {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'g3' 
+            'g1'
+            'g4'
+            'g2'
+            'g5'
+            'g6';
+        margin-bottom: 0px;
+    }
     
 
   }
@@ -231,6 +279,18 @@ footer {
         margin: 0 auto;
     
     }
+
+    #palvelutsivu {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'g3' 
+            'g1'
+            'g4'
+            'g2'
+            'g5'
+            'g6';
+        margin-bottom: 0px;
+    }
   }
 
   /* KONEKOKO */
@@ -256,6 +316,42 @@ footer {
     #etusivutoka {
         width: 100%;
         height: auto;
+    }
+
+    #palvelutsivu {
+        
+        grid-template-areas:
+        'gp1 gp5'
+        'gp6 gp2'
+        'gp3 gp7'
+        'gp8 gp4';
+        margin-bottom: 0px;
+    }
+
+    #palvelusivu1 {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 10px
+    }
+    #palvelusivu2 {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    #palvelusivu3 {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    #palvelusivu4 {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
     
   }
