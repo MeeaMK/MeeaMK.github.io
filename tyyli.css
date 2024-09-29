@@ -39,6 +39,20 @@ h2 {
 }
 
 
+/* PLS FIX WHAEVER TF SEE ON 
+#tekstiteksti {
+    display:inline-block;
+    width:70%;
+    margin:5% auto;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
+    
+}
+*/
+
 /* HEADER ja NAV BAR*/
 
 header {
@@ -122,6 +136,13 @@ figure {
 
 /* GRID - PALVELUTSIVU */
 
+.grid-contpalvelu {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+}
+
 .grid-palvelukuva1 { grid-area: gp1; }
 .grid-palvelukuva2 { grid-area: gp2; }
 .grid-palvelukuva3 { grid-area: gp3; }
@@ -131,12 +152,14 @@ figure {
     grid-area: gp5;
     padding: 25px;
     text-align: left;
+
 }
 
 .grid-palveluteksti2 {
     grid-area: gp6;
     padding: 25px;
     text-align: right;
+    grid-column: 1 / 3;
 }
 
 .grid-palveluteksti3 {
@@ -281,15 +304,38 @@ footer {
     }
 
     #palvelutsivu {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-            'g3' 
-            'g1'
-            'g4'
-            'g2'
-            'g5'
-            'g6';
+        'gp1 gp5 gp5'
+        'gp6 gp6 gp2'
+        'gp3 gp7 gp7'
+        'gp8 gp8 gp4';
         margin-bottom: 0px;
+    }
+
+    #palvelusivu1 {
+        width: 60%;
+        height: auto;
+        padding: 10px;
+        float: right;
+    }
+    #palvelusivu2 {
+        width: 60%;
+        height: auto;
+        padding: 10px;
+        float: left;
+    }
+    #palvelusivu3 {
+        width: 60%;
+        height: auto;
+        padding: 10px;
+        float: right;
+    }
+    #palvelusivu4 {
+        width: 60%;
+        height: auto;
+        padding: 10px;
+        float: left;
     }
   }
 
@@ -319,39 +365,51 @@ footer {
     }
 
     #palvelutsivu {
-        
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        'gp1 gp5'
-        'gp6 gp2'
-        'gp3 gp7'
-        'gp8 gp4';
+        'gp1 gp5 gp5'
+        'gp6 gp6 gp2'
+        'gp3 gp7 gp7'
+        'gp8 gp8 gp4';
         margin-bottom: 0px;
     }
 
     #palvelusivu1 {
-        width: 40%;
+        width: 60%;
         height: auto;
-        display: block;
-        margin: 0 auto;
-        padding: 10px
+        padding: 10px;
+        float: right;
+        margin-right: 30px;
+        border-radius:30px;
     }
+
     #palvelusivu2 {
-        width: 40%;
+        width: 60%;
         height: auto;
-        display: block;
-        margin: 0 auto;
+        padding: 10px;
+        float: left;
+        margin-left: 30px;
+        border-radius:30px;
     }
+
     #palvelusivu3 {
-        width: 40%;
+        width: 60%;
         height: auto;
-        display: block;
-        margin: 0 auto;
+        padding: 10px;
+        float: right;
+        margin-right: 30px;
+        border-radius:30px;
     }
+
     #palvelusivu4 {
-        width: 40%;
+        width: 60%;
         height: auto;
-        display: block;
-        margin: 0 auto;
+        padding: 10px;
+        float: left;
+        margin-left: 30px;
+        border-radius:30px;
     }
+
+
     
   }
