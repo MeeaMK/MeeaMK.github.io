@@ -67,7 +67,8 @@ header {
 
 nav {
     background: #B5C1AD;
-    
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -78,12 +79,9 @@ nav a {
     color: #262626;
     text-decoration: none;
     display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
     padding-bottom: 2px;
     padding-top: 2px;
-    margin-left: 8%;
-    margin-right: 8%;
+    
 }
 
 nav a:hover {
@@ -171,7 +169,6 @@ figure {
 .grid-palveluteksti1 {
     grid-area: gp5;
     padding: 25px;
-    width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
@@ -184,7 +181,6 @@ figure {
     grid-area: gp6;
     padding: 25px;
     text-align: left;
-    width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
@@ -195,7 +191,6 @@ figure {
 .grid-palveluteksti3 {
     grid-area: gp7;
     padding: 25px;
-    width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
@@ -207,7 +202,6 @@ figure {
     grid-area: gp8;
     padding: 25px;
     text-align: left;
-    width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
@@ -227,6 +221,9 @@ footer {
     background-color: #B5C1AD;
     margin-bottom: 0px;
     padding: 0px;
+    display: flex;
+
+    
 }
 
 #footerteksti {
@@ -254,13 +251,12 @@ footer {
   
   .fa-facebook {
     color: #595959;
-    border: 2px;
-    border-color: #595959;
 
   }
 
   .fa-instagram {
     color: #595959;
+    
   }
 
   .fa-envelope-o {
@@ -273,6 +269,17 @@ footer {
 
   @media (max-width: 600px) {
 
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
     #paasivu {
         grid-template-columns: 1fr;
@@ -345,28 +352,52 @@ footer {
     .grid-palveluteksti1 {
         display: block;
         margin: 0 auto;
+        width: 70%;
     }
 
     .grid-palveluteksti2 {
         display: block;
         margin: 0 auto;
+        width: 70%;
     }
 
     .grid-palveluteksti3 {
         display: block;
         margin: 0 auto;
+        width: 70%;
     }
 
     .grid-palveluteksti4 {
         display: block;
         margin: 0 auto;
+        width: 70%;
     }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fa {
+        margin-top: 25px;
+    }
+
   }
 
   /* TABLETTIKOKO */
 
   @media screen and (min-width: 600px) {
 
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
     #paasivu {
         grid-template-columns: 1fr;
@@ -408,28 +439,28 @@ footer {
     }
 
     #palvelusivu1 {
-        width: 40%;
+        width: 30%;
         height: auto;
         display: block;
         margin: 0 auto;
         border-radius:30px;
     }
     #palvelusivu2 {
-        width: 40%;
+        width: 30%;
         height: auto;
         display: block;
         margin: 0 auto;
         border-radius:30px;
     }
     #palvelusivu3 {
-        width: 40%;
+        width: 30%;
         height: auto;
         display: block;
         margin: 0 auto;
         border-radius:30px;
     }
     #palvelusivu4 {
-        width: 40%;
+        width: 30%;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -439,29 +470,52 @@ footer {
     .grid-palveluteksti1 {
         display: block;
         margin: 0 auto;
+        width: 60%;
     }
 
     .grid-palveluteksti2 {
         display: block;
         margin: 0 auto;
+        width: 60%;
     }
 
     .grid-palveluteksti3 {
         display: block;
         margin: 0 auto;
+        width: 60%;
     }
 
     .grid-palveluteksti4 {
         display: block;
         margin: 0 auto;
+        width: 60%;
     }
 
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fa {
+        margin-top: 25px;
+    }
   }
 
   /* KONEKOKO */
 
   @media screen and (min-width: 1200px) {
 
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 8%;
+        margin-right: 8%;
+        
+    }
 
     #paasivu {
         grid-template-columns: 2fr 1fr;
@@ -495,7 +549,7 @@ footer {
     }
 
     #palvelusivu1 {
-        width: 60%;
+        width: 65%;
         height: auto;
         padding: 10px;
         float: right;
@@ -504,7 +558,7 @@ footer {
     }
 
     #palvelusivu2 {
-        width: 60%;
+        width: 65%;
         height: auto;
         padding: 10px;
         float: left;
@@ -513,7 +567,7 @@ footer {
     }
 
     #palvelusivu3 {
-        width: 60%;
+        width: 65%;
         height: auto;
         padding: 10px;
         float: right;
@@ -522,7 +576,7 @@ footer {
     }
 
     #palvelusivu4 {
-        width: 60%;
+        width: 65%;
         height: auto;
         padding: 10px;
         float: left;
@@ -531,12 +585,14 @@ footer {
     }
 
     .grid-palveluteksti1 {
+        width: 80%;
         margin-left: 0px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
     .grid-palveluteksti2 {
+        width: 80%;
         margin-right: 0px;
         margin-left: auto;
         margin-top: 20px;
@@ -544,16 +600,27 @@ footer {
     }
     
     .grid-palveluteksti3 {
+        width: 80%;
         margin-left: 0px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
     
     .grid-palveluteksti4 {
+        width: 80%;
         margin-right: 0px;
         margin-left: auto;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .fa {
+        margin-top: 0px;
     }
     
   }
