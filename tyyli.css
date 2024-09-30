@@ -38,6 +38,16 @@ h2 {
     font-size: 25px;
 }
 
+.luelisaa {
+    color: #76991F;
+    font-weight: bold;
+    
+}
+
+.luelisaa:hover {
+    opacity: 50%;
+}
+
 
 /* PLS FIX WHAEVER TF SEE ON 
 #tekstiteksti {
@@ -110,12 +120,28 @@ figure {
     grid-area: g1;
     padding: 25px;
     text-align: center;
+    display:inline-block;
+    width:70%;
+    margin:5% auto;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
 }
 
 .grid-teksti2 { 
     grid-area: g2;
     padding: 25px;
     text-align: center;
+    display:inline-block;
+    width:70%;
+    margin:5% auto;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
 }
 
 .grid-kuva1 { grid-area: g3; }
@@ -152,6 +178,15 @@ figure {
     grid-area: gp5;
     padding: 25px;
     text-align: left;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:75%;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
 
 }
 
@@ -159,19 +194,47 @@ figure {
     grid-area: gp6;
     padding: 25px;
     text-align: right;
-    grid-column: 1 / 3;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:75%;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
 }
 
 .grid-palveluteksti3 {
     grid-area: gp7;
     padding: 25px;
     text-align: left;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:75%;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
 }
 
 .grid-palveluteksti4 {
     grid-area: gp8;
     padding: 25px;
     text-align: right;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:75%;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
 }
 
 .palveluteksti {
@@ -251,7 +314,7 @@ footer {
     }
     
     #etusivutoka {
-        width: 40%;
+        width: 60%;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -300,8 +363,8 @@ footer {
         height: auto;
         display: block;
         margin: 0 auto;
-    
     }
+
 
     #palvelutsivu {
         grid-template-columns: 1fr 1fr 1fr;
@@ -362,6 +425,7 @@ footer {
     #etusivutoka {
         width: 100%;
         height: auto;
+        margin: 0px;
     }
 
     #palvelutsivu {
