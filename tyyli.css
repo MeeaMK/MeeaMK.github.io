@@ -41,6 +41,14 @@ h2 {
 .luelisaa {
     color: #76991F;
     font-weight: bold;
+    text-decoration: none;
+    background: #B5C1AD;
+    display: inline-block;
+    padding: 8px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-radius: 10px;
+
     
 }
 
@@ -48,20 +56,6 @@ h2 {
     opacity: 50%;
 }
 
-
-/* PLS FIX WHAEVER TF SEE ON 
-#tekstiteksti {
-    display:inline-block;
-    width:70%;
-    margin:5% auto;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background:#F5F5EF;
-    border:solid 2px #262626;
-    
-}
-*/
 
 /* HEADER ja NAV BAR*/
 
@@ -177,10 +171,6 @@ figure {
 .grid-palveluteksti1 {
     grid-area: gp5;
     padding: 25px;
-    text-align: left;
-    margin-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
@@ -193,11 +183,7 @@ figure {
 .grid-palveluteksti2 {
     grid-area: gp6;
     padding: 25px;
-    text-align: right;
-    margin-right: 0px;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    text-align: left;
     width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
@@ -209,10 +195,6 @@ figure {
 .grid-palveluteksti3 {
     grid-area: gp7;
     padding: 25px;
-    text-align: left;
-    margin-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
@@ -224,11 +206,7 @@ figure {
 .grid-palveluteksti4 {
     grid-area: gp8;
     padding: 25px;
-    text-align: right;
-    margin-right: 0px;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    text-align: left;
     width:75%;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
@@ -324,16 +302,65 @@ footer {
     #palvelutsivu {
         grid-template-columns: 1fr;
         grid-template-areas:
-            'g3' 
-            'g1'
-            'g4'
-            'g2'
-            'g5'
-            'g6';
+        'gp1'
+        'gp5'
+        'gp2'
+        'gp6'
+        'gp3'
+        'gp7'
+        'gp4'
+        'gp8';
         margin-bottom: 0px;
     }
-    
 
+    #palvelusivu1 {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
+    }
+    #palvelusivu2 {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
+    }
+    #palvelusivu3 {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
+    }
+    #palvelusivu4 {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
+    }
+
+    .grid-palveluteksti1 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .grid-palveluteksti2 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .grid-palveluteksti3 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .grid-palveluteksti4 {
+        display: block;
+        margin: 0 auto;
+    }
   }
 
   /* TABLETTIKOKO */
@@ -367,39 +394,68 @@ footer {
 
 
     #palvelutsivu {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-        'gp1 gp5 gp5'
-        'gp6 gp6 gp2'
-        'gp3 gp7 gp7'
-        'gp8 gp8 gp4';
-        margin-bottom: 0px;
+        'gp1'
+        'gp5'
+        'gp2'
+        'gp6'
+        'gp3'
+        'gp7'
+        'gp4'
+        'gp8';
+        margin-bottom: 0px;     
     }
 
     #palvelusivu1 {
-        width: 60%;
+        width: 40%;
         height: auto;
-        padding: 10px;
-        float: right;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
     }
     #palvelusivu2 {
-        width: 60%;
+        width: 40%;
         height: auto;
-        padding: 10px;
-        float: left;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
     }
     #palvelusivu3 {
-        width: 60%;
+        width: 40%;
         height: auto;
-        padding: 10px;
-        float: right;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
     }
     #palvelusivu4 {
-        width: 60%;
+        width: 40%;
         height: auto;
-        padding: 10px;
-        float: left;
+        display: block;
+        margin: 0 auto;
+        border-radius:30px;
     }
+
+    .grid-palveluteksti1 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .grid-palveluteksti2 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .grid-palveluteksti3 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .grid-palveluteksti4 {
+        display: block;
+        margin: 0 auto;
+    }
+
   }
 
   /* KONEKOKO */
@@ -474,6 +530,30 @@ footer {
         border-radius:30px;
     }
 
+    .grid-palveluteksti1 {
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
+    .grid-palveluteksti2 {
+        margin-right: 0px;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .grid-palveluteksti3 {
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .grid-palveluteksti4 {
+        margin-right: 0px;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     
   }
