@@ -38,23 +38,45 @@ h2 {
     font-size: 25px;
 }
 
-.luelisaa {
-    color: #76991F;
+.tutustupalveluun {
+    color: #262626;
     font-weight: bold;
     text-decoration: none;
-    background: #B5C1AD;
     display: inline-block;
+    background: #F5F5EF;
     padding: 8px;
     padding-bottom: 2px;
     padding-top: 2px;
+    margin-top: 10px;
+    border: 3px solid;
     border-radius: 10px;
+    border-color: #B5C1AD;
+}
 
-    
+.tutustupalveluun:hover {
+    box-shadow: 0px 0px 5px 0px #7f7f7f;
+}
+
+.luelisaa {
+    color: #262626;
+    font-weight: bold;
+    text-decoration: none;
+    background: #F5F5EF;
+    padding: 8px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: #B5C1AD;
+    float: right;
 }
 
 .luelisaa:hover {
-    opacity: 50%;
+    box-shadow: 0px 0px 5px 0px #7f7f7f;
 }
+
+
+
 
 
 /* HEADER ja NAV BAR*/ /* laita header ja footer yhteen ja NAV ja linkit .luelisaa */
@@ -114,7 +136,7 @@ figure {
     text-align: center;
     display:inline-block;
     width:70%;
-    margin:5% auto;
+    margin:4% auto;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
@@ -128,7 +150,7 @@ figure {
     text-align: center;
     display:inline-block;
     width:70%;
-    margin:5% auto;
+    margin:4% auto;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
@@ -212,10 +234,10 @@ figure {
 .palveluteksti {
     margin-bottom: 0px;
     line-height: 2;
-}
+} 
 
 
-/* FOOTER */
+ /* FOOTER */
 
 footer {
     background-color: #B5C1AD;
@@ -233,7 +255,7 @@ footer {
     font-size: 15px;
 }
 
-/* ICONS footer */
+ /* ICONS footer */
 
 .fa {
     color: #595959;
@@ -243,50 +265,56 @@ footer {
     text-decoration: none;
     margin: 5px 5px;
     border-radius: 10%;
-  }
+}
   
-  .fa:hover {
-      opacity: 0.4;
-  }
+.fa:hover {
+    opacity: 0.4;
+}
   
-  .fa-facebook {
+.fa-facebook {
     color: #595959;
 
-  }
+}
 
-  .fa-instagram {
+.fa-instagram {
     color: #595959;
     
-  }
+}
 
-  .fa-envelope-o {
+.gmailteksti {
+    font-family: leipäteksti, sans-serif;
+}
+
+.fa-envelope-o {
     color: #595959;
-    width: 120px;
-  }
+    width: 230px;
+}
 
   /* YHTEYSTIETOSIVU */
 
 
-  .yhteyssivusisalto {
-    padding: 25px;
-    text-align: left;
+.yhteyssivusisalto {
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background:#F5F5EF;
-    border:solid 2px #262626;
+    padding: 50px;
+    padding-top: 25px;
+    line-height: 1.5em;
+    background: #F5F5EF;
+    border: solid 2px #262626;
     text-align: center;
+    line-height: 2;
 
-  }
+}
 
-  .yhteystietolinkki {
+.yhteystietolinkki {
     color: #76991F;
     font-weight: bold;
-  }
+    text-decoration: none;
+}
+
+.yhteystietolinkki:hover {
+    text-decoration: underline;
+}
   
-  .yhteystietolinkki:hover {
-    opacity: 50%;
-  }
 
   /* MOBIILIKOKO */
 
@@ -318,7 +346,6 @@ footer {
         width: 100%;
         height: auto;
         margin: 0px;
-    
     }
     
     #etusivutoka {
@@ -645,7 +672,7 @@ footer {
         margin-bottom: 20px;
     }
 
-.yhteyssivusisalto {
+    .yhteyssivusisalto {
         margin: 3%;
     }
 
