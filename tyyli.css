@@ -134,7 +134,7 @@ figure {
     grid-area: g1;
     padding: 25px;
     text-align: center;
-    display:inline-block;
+   
     width:70%;
     margin:4% auto;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -684,5 +684,11 @@ footer {
     .fa {
         margin-top: 0px;
     }
-    
+
+    .left1, .left2 {
+        margin-right: 15px;
+    }
+    .right1 {
+        margin-left: auto;
+    }
   }
