@@ -57,7 +57,7 @@ h2 {
 }
 
 
-/* HEADER ja NAV BAR*/
+/* HEADER ja NAV BAR*/ /* laita header ja footer yhteen ja NAV ja linkit .luelisaa */
 
 header {
     text-align: center;
@@ -220,7 +220,7 @@ figure {
 footer {
     background-color: #B5C1AD;
     margin-bottom: 0px;
-    padding: 0px;
+    padding: 20px;
     display: flex;
 
     
@@ -264,6 +264,29 @@ footer {
     width: 120px;
   }
 
+  /* YHTEYSTIETOSIVU */
+
+
+  .yhteyssivusisalto {
+    padding: 25px;
+    text-align: left;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#F5F5EF;
+    border:solid 2px #262626;
+    text-align: center;
+
+  }
+
+  .yhteystietolinkki {
+    color: #76991F;
+    font-weight: bold;
+  }
+  
+  .yhteystietolinkki:hover {
+    opacity: 50%;
+  }
 
   /* MOBIILIKOKO */
 
@@ -371,6 +394,10 @@ footer {
         display: block;
         margin: 0 auto;
         width: 70%;
+    }
+
+    .yhteyssivusisalto {
+        margin: 6%;
     }
 
     footer {
@@ -489,6 +516,10 @@ footer {
         display: block;
         margin: 0 auto;
         width: 60%;
+    }
+
+    .yhteyssivusisalto {
+        margin: 6%;
     }
 
     footer {
@@ -612,6 +643,10 @@ footer {
         margin-left: auto;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+.yhteyssivusisalto {
+        margin: 3%;
     }
 
     footer {
