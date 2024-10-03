@@ -54,8 +54,7 @@ header {
 nav {
     background: #B5C1AD;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 
 nav a {
@@ -65,14 +64,11 @@ nav a {
     color: #262626;
     text-decoration: none;
     padding-bottom: 2px;
-    padding-top: 2px;
-    
+    padding-top: 2px;    
 }
 
 nav a:hover {
     background: #F5F5EF;
-   
-
 }
 
 #valittu:hover {
@@ -80,15 +76,13 @@ nav a:hover {
 }
 
 #valittu {
-    color: #F5F5EF; 
-     
+    color: #F5F5EF;    
 }
 
-/* FIGURE */
+/* FIGURE - kuvat */
 
 figure {
     margin: 0px;
-    
 }
 
 
@@ -135,42 +129,13 @@ figure {
 .grid-palvelukuva3 { grid-area: gp3; }
 .grid-palvelukuva4 { grid-area: gp4; }
 
-.grid-palveluteksti1 {
-    grid-area: gp5;
-    padding: 25px;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background:#F5F5EF;
-    border:solid 2px #262626;
+.grid-palveluteksti1 { grid-area: gp5; }
+.grid-palveluteksti2 { grid-area: gp6; }
+.grid-palveluteksti3 { grid-area: gp7; }
+.grid-palveluteksti4 { grid-area: gp8; }
 
-}
-
-.grid-palveluteksti2 {
-    grid-area: gp6;
+.grid-palveluteksti1, .grid-palveluteksti2, .grid-palveluteksti3, .grid-palveluteksti4 {
     padding: 25px;
-    text-align: left;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background:#F5F5EF;
-    border:solid 2px #262626;
-}
-
-.grid-palveluteksti3 {
-    grid-area: gp7;
-    padding: 25px;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background:#F5F5EF;
-    border:solid 2px #262626;
-}
-
-.grid-palveluteksti4 {
-    grid-area: gp8;
-    padding: 25px;
-    text-align: left;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
