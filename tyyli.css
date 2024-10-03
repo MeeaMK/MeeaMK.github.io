@@ -1,6 +1,6 @@
 
 
-/* BODY, OTSIKOT, FONTIT */
+/* BODY, FONTIT, fonttikoot */
 
 @font-face {
     font-family: otsikot;
@@ -35,6 +35,11 @@ h2 {
     font-family: 'otsikot', sans-serif;
     font-size: 25px;
 }
+
+p {
+    margin-bottom: 0px;
+    line-height: 2;
+} 
 
 
 /* HEADER */ 
@@ -89,8 +94,10 @@ figure {
 
 /* GRID - index.html */
 
-.grid-teksti1 { 
-    grid-area: g1;
+.grid-teksti1 { grid-area: g1; }
+.grid-teksti2 { grid-area: g2; }
+
+.grid-teksti1, .grid-teksti2 {
     padding: 25px;
     text-align: center;
     width:70%;
@@ -99,22 +106,9 @@ figure {
     padding:1em;
     line-height:1.5em;
     background:#F5F5EF;
-    border:solid 2px #262626;
+    border:solid 2px #262626;   
 }
 
-.grid-teksti2 { 
-    grid-area: g2;
-    padding: 25px;
-    text-align: center;
-    display:inline-block;
-    width:70%;
-    margin:4% auto;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background:#F5F5EF;
-    border:solid 2px #262626;
-}
 
 .grid-kuva1 { grid-area: g3; }
 .grid-kuva2 { grid-area: g4; }
@@ -124,11 +118,6 @@ figure {
     column-gap: 0px;
     row-gap: 0px;
     padding: 0px;
-}
-
-.paateksti {
-    margin-bottom: 0px;
-    line-height: 2;
 }
 
 
@@ -188,11 +177,6 @@ figure {
     background:#F5F5EF;
     border:solid 2px #262626;
 }
-
-.palveluteksti {
-    margin-bottom: 0px;
-    line-height: 2;
-} 
 
 
   /* ASETTELU - yhteys.html */
@@ -333,7 +317,7 @@ figure {
 }
 
 
-  /* MOBIILIKOKO */
+  /* ------ MOBIILIKOKO ------ */
 
   @media (max-width: 600px) {
 
@@ -342,8 +326,8 @@ figure {
         text-align: center;
     }
 
-
-    #paasivu {
+  /* MOBIILIKOKO - etusivun asettelu*/
+    #etusivu {
         grid-template-columns: 1fr;
         grid-template-areas:
             'g3'
@@ -353,20 +337,20 @@ figure {
         margin-bottom: 0px;
     }
 
-    #etusivueka {
+    #etusivukuva1 {
         width: 100%;
         height: auto;
         margin: 0px;
     }
     
-    #etusivutoka {
+    #etusivukuva2 {
         width: 60%;
         height: auto;
         display: block;
         margin: 0 auto;
-     
     }
 
+  /* MOBIILIKOKO - palvelutsivun asettelu*/
     #palvelutsivu {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -381,63 +365,27 @@ figure {
         margin-bottom: 0px;
     }
 
-    #palvelusivu1 {
+    #palvelusivu-kuva1, #palvelusivu-kuva2, #palvelusivu-kuva3, #palvelusivu-kuva4 {
         width: 60%;
         height: auto;
         display: block;
         margin: 0 auto;
         border-radius:30px;
     }
-    #palvelusivu2 {
-        width: 60%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius:30px;
-    }
-    #palvelusivu3 {
-        width: 60%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius:30px;
-    }
-    #palvelusivu4 {
-        width: 60%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius:30px;
-    }
+ 
 
-    .grid-palveluteksti1 {
+    .grid-palveluteksti1, .grid-palveluteksti2, .grid-palveluteksti3, .grid-palveluteksti4 {
         display: block;
         margin: 0 auto;
         width: 70%;
     }
 
-    .grid-palveluteksti2 {
-        display: block;
-        margin: 0 auto;
-        width: 70%;
-    }
-
-    .grid-palveluteksti3 {
-        display: block;
-        margin: 0 auto;
-        width: 70%;
-    }
-
-    .grid-palveluteksti4 {
-        display: block;
-        margin: 0 auto;
-        width: 70%;
-    }
-
+  /* MOBIILIKOKO - yhteystietosivu asettelu */
     .yhteyssivusisalto {
         margin: 6%;
     }
 
+  /* MOBIILIKOKO - footerin ja logojen asettelu */
     footer {
         flex-direction: column;
         align-items: center;
@@ -449,7 +397,8 @@ figure {
 
   }
 
-  /* TABLETTIKOKO */
+
+  /* ------ TABLETTIKOKO ------ */
 
   @media screen and (min-width: 600px) {
 
@@ -457,7 +406,8 @@ figure {
         flex-direction: column;
     }
 
-    #paasivu {
+  /* TABLETTIKOKO - etusivun asettelu */
+    #etusivu {
         grid-template-columns: 1fr;
         grid-template-areas:
             'g3'
@@ -467,21 +417,21 @@ figure {
         margin-bottom: 0px;
     }
 
-    #etusivueka {
+    #etusivukuva1 {
         width: 100%;
         height: auto;
         margin: 0px;
     
     }
     
-    #etusivutoka {
+    #etusivukuva2 {
         width: 40%;
         height: auto;
         display: block;
         margin: 0 auto;
     }
 
-
+  /* TABLETTIKOKO - palvelut sivun asettelu */
     #palvelutsivu {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -496,28 +446,7 @@ figure {
         margin-bottom: 0px;     
     }
 
-    #palvelusivu1 {
-        width: 30%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius:30px;
-    }
-    #palvelusivu2 {
-        width: 30%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius:30px;
-    }
-    #palvelusivu3 {
-        width: 30%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius:30px;
-    }
-    #palvelusivu4 {
+    #palvelusivu-kuva1, #palvelusivu-kuva2, #palvelusivu-kuva3, #palvelusivu-kuva4 {
         width: 30%;
         height: auto;
         display: block;
@@ -525,34 +454,18 @@ figure {
         border-radius:30px;
     }
 
-    .grid-palveluteksti1 {
+    .grid-palveluteksti1, .grid-palveluteksti2, .grid-palveluteksti3, .grid-palveluteksti4 {
         display: block;
         margin: 0 auto;
         width: 60%;
     }
 
-    .grid-palveluteksti2 {
-        display: block;
-        margin: 0 auto;
-        width: 60%;
-    }
-
-    .grid-palveluteksti3 {
-        display: block;
-        margin: 0 auto;
-        width: 60%;
-    }
-
-    .grid-palveluteksti4 {
-        display: block;
-        margin: 0 auto;
-        width: 60%;
-    }
-
+  /* TABLETTIKOKO - yhteystietosivu asettelu */
     .yhteyssivusisalto {
         margin: 6%;
     }
 
+  /* TABLETTIKOKO - footerin ja logojen asettelu */
     footer {
         flex-direction: column;
         align-items: center;
@@ -565,10 +478,11 @@ figure {
   
   }
 
-  /* KONEKOKO */
+  /* ------ KONEKOKO ------ */
 
   @media screen and (min-width: 1200px) {
 
+ /* KONEKOKO - Nav bar - päävalikko */
     nav {
         flex-direction: row;
     }
@@ -581,7 +495,8 @@ figure {
         
     }
 
-    #paasivu {
+  /* KONEKOKO - etusivun asettelu */
+    #etusivu {
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
             'g3 g1'
@@ -589,19 +504,20 @@ figure {
         margin-bottom: 0px;
     }
 
-    #etusivueka {
+    #etusivukuva1 {
         width: 100%;
         height: auto;
         margin: 0px;
     
     }
     
-    #etusivutoka {
+    #etusivukuva2 {
         width: 100%;
         height: auto;
         margin: 0px;
     }
 
+  /* KONEKOKO - palvelutsivun asettelu */
     #palvelutsivu {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
@@ -612,7 +528,7 @@ figure {
         margin-bottom: 0px;
     }
 
-    #palvelusivu1 {
+    #palvelusivu-kuva1, #palvelusivu-kuva3 {
         width: 65%;
         height: auto;
         padding: 10px;
@@ -621,7 +537,7 @@ figure {
         border-radius:30px;
     }
 
-    #palvelusivu2 {
+    #palvelusivu-kuva2, #palvelusivu-kuva4 {
         width: 65%;
         height: auto;
         padding: 10px;
@@ -630,47 +546,14 @@ figure {
         border-radius:30px;
     }
 
-    #palvelusivu3 {
-        width: 65%;
-        height: auto;
-        padding: 10px;
-        float: right;
-        margin-right: 30px;
-        border-radius:30px;
-    }
-
-    #palvelusivu4 {
-        width: 65%;
-        height: auto;
-        padding: 10px;
-        float: left;
-        margin-left: 30px;
-        border-radius:30px;
-    }
-
-    .grid-palveluteksti1 {
+    .grid-palveluteksti1, .grid-palveluteksti3 {
         width: 80%;
         margin-left: 0px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
-    .grid-palveluteksti2 {
-        width: 80%;
-        margin-right: 0px;
-        margin-left: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .grid-palveluteksti3 {
-        width: 80%;
-        margin-left: 0px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .grid-palveluteksti4 {
+    .grid-palveluteksti2, .grid-palveluteksti4 {
         width: 80%;
         margin-right: 0px;
         margin-left: auto;
@@ -678,10 +561,12 @@ figure {
         margin-bottom: 20px;
     }
 
+  /* KONEKOKO - yhteystietosivun asettelu */
     .yhteyssivusisalto {
         margin: 3%;
     }
 
+  /* KONEKOKO - footer ja logojen asettelu */
     footer {
         flex-direction: row;
         justify-content: space-between;
