@@ -1,8 +1,6 @@
-/* Taustatyylit */
 
 
-
-/* FONTIT, TEKSTIKOOT, yms. */
+/* BODY, OTSIKOT, FONTIT */
 
 @font-face {
     font-family: otsikot;
@@ -38,54 +36,15 @@ h2 {
     font-size: 25px;
 }
 
-.tutustupalveluun {
-    color: #262626;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    background: #F5F5EF;
-    padding: 8px;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    margin-top: 10px;
-    border: 3px solid;
-    border-radius: 10px;
-    border-color: #B5C1AD;
-}
 
-.tutustupalveluun:hover {
-    box-shadow: 0px 0px 5px 0px #7f7f7f;
-}
-
-.luelisaa {
-    color: #262626;
-    font-weight: bold;
-    text-decoration: none;
-    background: #F5F5EF;
-    padding: 8px;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    border: 3px solid;
-    border-radius: 10px;
-    border-color: #B5C1AD;
-    float: right;
-}
-
-.luelisaa:hover {
-    box-shadow: 0px 0px 5px 0px #7f7f7f;
-}
-
-
-
-
-
-/* HEADER ja NAV BAR*/ /* laita header ja footer yhteen ja NAV ja linkit .luelisaa */
+/* HEADER */ 
 
 header {
     text-align: center;
     padding-top: 15px;
 }
     
+/* NAV bar */
 
 nav {
     background: #B5C1AD;
@@ -100,7 +59,6 @@ nav a {
     font-size: 25px;
     color: #262626;
     text-decoration: none;
-    display: inline-block;
     padding-bottom: 2px;
     padding-top: 2px;
     
@@ -121,14 +79,15 @@ nav a:hover {
      
 }
 
-/* KUVAT */
+/* FIGURE */
 
 figure {
     margin: 0px;
     
 }
 
-/* GRID - PÄÄSIVU */
+
+/* GRID - index.html */
 
 .grid-teksti1 { 
     grid-area: g1;
@@ -168,13 +127,13 @@ figure {
     padding: 0px;
 }
 
-
 .paateksti {
     margin-bottom: 0px;
     line-height: 2;
 }
 
-/* GRID - PALVELUTSIVU */
+
+/* GRID - palvelut.html */
 
 .grid-contpalvelu {
     display: grid;
@@ -237,9 +196,76 @@ figure {
 } 
 
 
+  /* ASETTELU - yhteys.html */
+
+
+.yhteyssivusisalto {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 50px;
+    padding-top: 25px;
+    line-height: 1.5em;
+    background: #F5F5EF;
+    border: solid 2px #262626;
+    text-align: center;
+    line-height: 2;
+
+}
+
+.yhteystietolinkki {
+    color: #76991F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.yhteystietolinkki:hover {
+    text-decoration: underline;
+}
+  
+
+/* CTA (etusivu ja palvelutsivu) */
+
+.tutustupalveluun {
+    color: #262626;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    background: #F5F5EF;
+    padding: 8px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-top: 10px;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: #B5C1AD;
+}
+
+.tutustupalveluun:hover {
+    box-shadow: 0px 0px 5px 0px #7f7f7f;
+}
+
+.luelisaa {
+    margin-top: 10px;
+    color: #262626;
+    font-weight: bold;
+    text-decoration: none;
+    background: #F5F5EF;
+    padding: 8px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: #B5C1AD;
+    float: right;
+}
+
+.luelisaa:hover {
+    box-shadow: 0px 0px 5px 0px #7f7f7f;
+}
+
+
  /* FOOTER */
 
-footer {
+ footer {
     background-color: #B5C1AD;
     margin-bottom: 0px;
     padding: 20px;
@@ -255,7 +281,8 @@ footer {
     font-size: 15px;
 }
 
- /* ICONS footer */
+
+ /* ICONS - footer */
 
 .fa {
     color: #595959;
@@ -290,31 +317,6 @@ footer {
     width: 230px;
 }
 
-  /* YHTEYSTIETOSIVU */
-
-
-.yhteyssivusisalto {
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding: 50px;
-    padding-top: 25px;
-    line-height: 1.5em;
-    background: #F5F5EF;
-    border: solid 2px #262626;
-    text-align: center;
-    line-height: 2;
-
-}
-
-.yhteystietolinkki {
-    color: #76991F;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.yhteystietolinkki:hover {
-    text-decoration: underline;
-}
-  
 
   /* MOBIILIKOKO */
 
@@ -325,12 +327,6 @@ footer {
         text-align: center;
     }
 
-    nav a {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
 
     #paasivu {
         grid-template-columns: 1fr;
@@ -446,13 +442,6 @@ footer {
         flex-direction: column;
     }
 
-    nav a {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
     #paasivu {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -557,6 +546,8 @@ footer {
     .fa {
         margin-top: 25px;
     }
+
+  
   }
 
   /* KONEKOKO */
@@ -692,3 +683,4 @@ footer {
         margin-left: auto;
     }
   }
+
