@@ -44,7 +44,7 @@ header {
     padding-top: 15px;
 }
     
-/* NAV bar */
+/* NAV bar - päävalikko */
 
 nav {
     background: #B5C1AD;
@@ -93,7 +93,6 @@ figure {
     grid-area: g1;
     padding: 25px;
     text-align: center;
-   
     width:70%;
     margin:4% auto;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -211,6 +210,9 @@ figure {
 
 }
 
+
+/* yhteys.html - linkit */
+
 .yhteystietolinkki {
     color: #76991F;
     font-weight: bold;
@@ -219,6 +221,10 @@ figure {
 
 .yhteystietolinkki:hover {
     text-decoration: underline;
+}
+
+.yhteystietolinkki:active {
+    color: #262626;
 }
   
 
@@ -243,6 +249,11 @@ figure {
     box-shadow: 0px 0px 5px 0px #7f7f7f;
 }
 
+.tutustupalveluun:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
 .luelisaa {
     margin-top: 10px;
     color: #262626;
@@ -262,6 +273,10 @@ figure {
     box-shadow: 0px 0px 5px 0px #7f7f7f;
 }
 
+.luelisaa:active{
+    transform: translateY(2px);
+    box-shadow: none;
+}
 
  /* FOOTER */
 
