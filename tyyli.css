@@ -233,9 +233,7 @@ figure {
     background-color: #B5C1AD;
     margin-bottom: 0px;
     padding: 20px;
-    display: flex;
-
-    
+    display: flex;   
 }
 
 #footerteksti {
@@ -264,12 +262,10 @@ figure {
   
 .fa-facebook {
     color: #595959;
-
 }
 
 .fa-instagram {
-    color: #595959;
-    
+    color: #595959;   
 }
 
 .gmailteksti {
@@ -386,7 +382,6 @@ figure {
         width: 100%;
         height: auto;
         margin: 0px;
-    
     }
     
     #etusivukuva2 {
@@ -456,8 +451,7 @@ figure {
         padding-left: 20px;
         padding-right: 20px;
         margin-left: 8%;
-        margin-right: 8%;
-        
+        margin-right: 8%;   
     }
 
   /* KONEKOKO - etusivun asettelu */
@@ -473,7 +467,6 @@ figure {
         width: 100%;
         height: auto;
         margin: 0px;
-    
     }
     
     #etusivukuva2 {
@@ -547,5 +540,6 @@ figure {
     .right1 {
         margin-left: auto;
     }
+    
   }
 
