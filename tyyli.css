@@ -258,6 +258,10 @@ figure {
 .fa:hover {
     opacity: 0.4;
 }
+
+.fa:active {
+    opacity: unset;
+}
   
 .fa-facebook {
     color: #595959;
