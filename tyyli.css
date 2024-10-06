@@ -349,6 +349,10 @@ figure {
         width: 70%;
     }
 
+    .grid-contpalvelu {
+        min-height: 200px;
+    }
+
   /* MOBIILIKOKO - yhteystietosivu asettelu */
     .yhteyssivusisalto {
         margin: 6%;
