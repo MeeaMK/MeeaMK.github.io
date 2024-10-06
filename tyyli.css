@@ -299,6 +299,7 @@ figure {
         width: 100%;
         height: auto;
         margin: 0px;
+        max-height: 400px;
     }
     
     #etusivukuva2 {
@@ -329,6 +330,7 @@ figure {
         display: block;
         margin: 0 auto;
         border-radius:30px;
+        max-height: 400px;
     }
  
 
