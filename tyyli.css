@@ -39,7 +39,6 @@ h2 {
 p {
     margin-bottom: 0px;
     line-height: 2;
-    min-height: 100px;
 } 
 
 
@@ -348,6 +347,7 @@ figure {
         display: block;
         margin: 0 auto;
         width: 70%;
+        min-height: 100px;
     }
 
     .grid-contpalvelu {
