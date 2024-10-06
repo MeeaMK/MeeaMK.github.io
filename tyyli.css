@@ -340,6 +340,7 @@ figure {
         display: block;
         margin: 0 auto;
         border-radius:30px;
+        min-height: 100px;
         max-height: 400px;
     }
  
