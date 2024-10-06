@@ -299,7 +299,7 @@ figure {
         width: 100%;
         height: auto;
         margin: 0px;
-        max-height: 400px;
+        min-height: 200px;
     }
     
     #etusivukuva2 {
@@ -307,7 +307,7 @@ figure {
         height: auto;
         display: block;
         margin: 0 auto;
-        max-height: 400px;
+        min-height: 200px;
     }
 
     .grid-teksti1 {
