@@ -315,7 +315,7 @@ figure {
     }
 
     .grid-container {
-        max-height: 1700px;
+        min-height: 200px;
     }
 
   /* MOBIILIKOKO - palvelutsivun asettelu*/
