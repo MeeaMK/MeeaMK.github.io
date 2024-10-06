@@ -174,7 +174,7 @@ figure {
 }
 
 .yhteystietolinkki:active {
-    color: #262626;
+    opacity: 30%;;
 }
   
 
