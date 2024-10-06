@@ -73,10 +73,12 @@ nav a:hover {
 
 #valittu:hover {
     color: #262626;
+    text-shadow: none;
 }
 
 #valittu {
     color: #ffffff;  
+    text-shadow: 0px 0px 3px #000000;
 }
 
 /* FIGURE - kuvat */
