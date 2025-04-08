@@ -1,3 +1,18 @@
 .navbar-custom {
     background-color: rgb(81, 107, 81);
 }
+
+p {
+    color: blue; /* Change 'blue' to any color you prefer */
+  }
+
+
+h5 {
+    color: rgb(183, 1, 1);
+    font-weight: 1000;
+}
+
+.carousel-caption {
+background-color: antiquewhite;
+opacity: 80%;
+}
