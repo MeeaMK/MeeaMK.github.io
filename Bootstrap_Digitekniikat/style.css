@@ -1,6 +1,62 @@
-.navbar-custom {
-    background-color: rgb(81, 107, 81);
+/* Koko sivuston tekstityylit ja muut */
+
+p {
+    color: blue; 
 }
+
+h1 {
+    color:#FF0000;
+}
+
+header {
+    background-image: url('kuvat/hämster.jpg');
+    background-size: cover;
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* nav bar tyylit */
+
+.nav-link{
+    color: #97fdad;
+}
+
+.header-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.navbar-custom {
+    background-color: rgba(81, 107, 81, 0.7);
+    z-index: 2;
+    
+}
+
+
+
+/* Etusivu */
+
+.extra-margin {
+    margin-top: 70px !important;
+}
+
+/* Etusivu call-to-action-button */
+
+.btn-outline-primary{
+    color: #8b00ff;
+    border-color: #8B00FF;
+}
+.btn-outline-primary:hover {
+    background-color: #40ff8c;
+    color: white;
+    border-color: #7c40ff;
+}
+
 
 p {
     color: blue; /* Change 'blue' to any color you prefer */
