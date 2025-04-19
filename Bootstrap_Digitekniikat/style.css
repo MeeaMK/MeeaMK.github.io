@@ -8,6 +8,15 @@ h1 {
     color:#FF0000;
 }
 
+h2 {
+    color:#ffffff;
+}
+
+main {
+    background: #202220;
+    overflow: hidden;
+}
+
 header {
     background-image: url('kuvat/hämster.jpg');
     background-size: cover;
@@ -35,7 +44,14 @@ header {
     background-color: rgba(81, 107, 81, 0.7);
     z-index: 2;
     
+    
 }
+
+.nav-item {
+    
+}
+
+
 
 
 
@@ -44,6 +60,12 @@ header {
 .extra-margin {
     margin-top: 70px !important;
 }
+
+.bg-custom1 {
+    background-color: rgba(34, 240, 255, 0.1);
+}
+
+
 
 /* Etusivu call-to-action-button */
 
@@ -73,6 +95,10 @@ background-color: antiquewhite;
 opacity: 80%;
 }
 
+/* Karusellisivu */
+
+
+
 /* Sattenkaari ruudukon tyyli */
 
 .rainbow-col-1 { background-color: #FF0000; } /* Red */
@@ -89,3 +115,49 @@ opacity: 80%;
     color: white;
     text-align: center;
 }
+
+/* ekstra kokosäätöö puelimille */
+
+@media screen and (max-width: 430px) {
+    /* styles for iPhone 15 Pro Max and smaller */
+
+    .cardcontainer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .accordioncontainer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .carouselcontainer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .taulukkocontainer {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .karusellikuva {
+        width: 100% !important;
+    }
+
+
+  }
+
+  @media (min-width: 430px) and (max-width: 767px) {
+    /* Styles for tablets */
+
+    .karusellikuva {
+        width: 100% !important;
+    }
+
+    .taulukkocontainer {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+  }
