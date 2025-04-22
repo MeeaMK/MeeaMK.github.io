@@ -19,9 +19,9 @@
         <div class="container-fluid">
 
             <!--Logo ja kuva navis-->
-            <div class="navi-brad navbar-text px-3 d-flex">
+            <div class="navi-brad navbar-text px-3">
                 <a href="index.html">
-                     <img src="kuvat/headphone.png" alt="Logo" width="50" class="d-block mx-auto mb-2">exposed.fm
+                     <img src="kuvat/headphone.png" alt="Logo" width="50" class="mx-2">
                 </a>
             </div>       
         
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
                 <!-- Linkit naviin ja hamppariin-->
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-3">
 
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="index.html">Etusivu/index</a>
@@ -69,7 +69,7 @@
 
      <div class="header-content container p-5 my-5 extra-margin">
 
-        <h1>Mian spotify lil kokoelma tai jotain</h1>
+        <h1>jotain jotain</h1>
         <br>
         <a href="index.html" class="btn btn-outline-primary"> SHEEEESH</a>
        
@@ -84,23 +84,41 @@
    <main>  
         <div class="container p-5 my-5 bg-custom1">
 
-            <h2>jotain</h2>
+            <div class="customcontent1">
+                <h2>Welcome to exposed.fm</h2>
 
-            <p>liityin spotify joskus vuosi, käytän premiumii tässä mun parhaat artistit ja mitä vittua blogi mun spotify käytöst yms yms "henkilökohtianen spotify overview????"</p>
+                <p>liityin spotify joskus vuosi, käytän premiumii tässä mun parhaat artistit ja mitä vittua blogi mun spotify käytöst yms yms "henkilökohtianen spotify overview????"</p>
 
-            <p>Oisko ekstra yäppäystä. Nauti salaista infoo spotify sisällöstäni!?</p>
+                <p>Oisko ekstra yäppäystä. Nauti salaista infoo spotify sisällöstäni!?</p>
+
+                <a href="haitari.html" class="btn btn-outline-primary"> tsekkaa tää</a>
+
+                <h2>extraaa extraa</h2>
+                
+                <p>oisko ekstra infoo jostain lorem ipsum yms yms</p>
+
+                <a href="kortit.html" class="btn btn-outline-primary"> tää vie myös jonneki</a>
+
+            </div>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0F1h8fzKjaBOOdQS8eXpLU?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         
         </div>
 
-        <!--värisäiliö-->
-        <div class="container p-5 my-5 bg-danger text-white">
-            <h2>jonkunvärinen säiliö (oisko tänne kuva milt spottini näyttää tai spotify wrapped kuva jos löytyy?)</h2>
-            
-            <p>oisko ekstra infoo jostain lorem ipsum yms yms</p>
-
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0F1h8fzKjaBOOdQS8eXpLU?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-        <div>
+       <!-- Toast container -->
+        <div class="position-fixed bottom-0 end-0 p-3 " >
+            <!-- Toast element -->
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            <div class="toast-header">
+                <strong class="me-auto">EXPOSED.FM</strong>
+                <small>Message</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Welcome to exposed.fm! Feel free to snoop around.
+            </div>
+            </div>
+        </div>
             
     </main>
 
@@ -108,23 +126,30 @@
 
     <footer>
 
-        <div class="container text-center">
+        <div class="container text-center p-3">
             <div class="row row-cols-1 row-cols-md-3">
-              <div class="col">
-                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
-                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+              <div class="col footeritem">
+                <a href="https://www.spotify.com"><i class="fa fa-spotify"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a> <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
               </div>
-              <div class="col">
-                <p>Copyright © 2024, Minä Oy</p>
+              <div class="col footeritem">
+                <p class="footertext">Copyright © 2024, Minä Oy</p>
               </div>
-              <div class="col">
-                <p><a href="mailto:munspotti@gmail.com">info@ticocafe.fi</a></p>
+              <div class="col footeritem">
+                <a href="mailto:exposed.fm@gmail.com" class="footerlink">exposed.fm@gmail.com</a>
               </div>
             </div>
           </div>
 
-     </footer>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const toastEl = document.querySelector('.toast');
+          const toast = new bootstrap.Toast(toastEl, { autohide: false });
+          toast.show();
+        });
+    </script>
         
 </body>
 </html>
