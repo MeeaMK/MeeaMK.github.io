@@ -23,9 +23,10 @@ p {
 h1 {
     color:#934aff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-size: clamp(1.3rem, 5vw, 2.5rem);
     font-weight: 800;
     letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 
 }
 
@@ -41,7 +42,7 @@ h2 {
 /* vaihtoehto green colour rgb(44, 146, 44) */
 
 main {
-    background: rgba(29,23,39,255);
+    background: rgb(29,23,39);
     overflow: hidden;
 }
 
@@ -115,6 +116,21 @@ header {
 
 /* Etusivu call-to-action-button */
 
+.btn-outline-banner{
+    color: rgb(44, 146, 44);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgb(44, 146, 44);
+    border-width: 3px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.btn-outline-banner:hover {
+    background-color: rgba(44, 146, 44, 0.5);
+    color: rgb(227, 226, 226);
+    border-color: rgb(44, 146, 44);
+}
+
 .btn-outline-primary{
     color: rgb(44, 146, 44);
     border-color: rgb(44, 146, 44);
@@ -134,10 +150,6 @@ h5 {
     font-weight: 400;
 } */
 
-.carousel-caption {
-background-color: antiquewhite;
-opacity: 80%;
-}
 
 .toast {
     background-color:  rgba(42,36,47,1);
@@ -155,7 +167,25 @@ opacity: 80%;
 
 
 
-/* Karusellisivu */
+/* KARUSELLI SIVU */
+
+.carousel-caption-static {
+    background-color:rgb(18, 15, 20);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.carousel-title {
+    color:  #9460e3;
+    text-align: center;
+}
+
+.carousel-text {
+    color: #bfbfbf;
+    text-align: center;
+}
 
 /* KORTTI SIVU */
 
@@ -190,14 +220,36 @@ opacity: 80%;
 /* ACCORDION SIVU */
 
 .accordion-item, .accordion-button {
-    background-color: black;
-    color: white;
+    background-color: rgb(18, 15, 20);
+    color: #bfbfbf;
     border-color: rgb(39, 39, 39);
 }
 
 .accordion-button:not(.collapsed) {
-    background-color:blueviolet;
+    background-color:rgb(18, 15, 20);
+    color: #9460e3;
+    font-weight: 600;
+    box-shadow: none !important;
 }
+
+.accordion-button:hover {
+    color: #9460e3;   
+}
+
+/* TAULUKKO SIVU */
+
+.table-custom > th, .table-custom > td {
+  background-color: rgb(27,27,27); 
+  color: #bfbfbf;
+  border-color:  rgba(42,36,47,1);
+}
+
+.table-head > th {
+    background-color:  rgb(18, 15, 20);
+    color: #bfbfbf;
+    border-color:  rgba(42,36,47,1);
+}
+
 
 
 
@@ -271,6 +323,10 @@ footer {
         width: 100% !important;
     }
 
+    .carousel-caption-static {
+        width: 100%;
+    }
+
     .customcontent1 {
         padding-left: 0px;
         padding-right: 0px;
@@ -286,6 +342,10 @@ footer {
 
     .karusellikuva {
         width: 100% !important;
+    }
+
+    .carousel-caption-static {
+        width: 100%;
     }
 
     .taulukkocontainer {
