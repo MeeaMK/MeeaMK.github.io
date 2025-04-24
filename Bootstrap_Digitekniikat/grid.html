@@ -3,133 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Digitekniikat</title>
+    <title>Songs Exposed.fm</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-   <main>
-    <!--Koko navibar-->
-    <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
-        <div class="container-fluid">
 
-            <!--Logo ja kuva navis-->
-            <div class="navi-brad navbar-text">
-                <a href="index.html">
-                     <img src="kuvat/headphone.png" alt="Logo" width="50">
-                       
-                </a>
-            </div>       
-        
-            <!--hampparivalikko buttoni-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-            </button>
+    <!--HEADER / main banner-->
+    <header>
+        <!--NAVIGOINTI-->
+        <nav class="navbar navbar-expand-md navbar-custom navbar-dark fixed-top">
+            <div class="container-fluid">
 
-            <!--määrittää mitä linkkei tulee hamppariin-->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!--LOGO KUVA navigoinnissa-->
+                <div class="navi-brad navbar-text px-3">
+                    <a href="index.html">
+                        <img src="kuvat/headphone.png" alt="Logo" width="50" class="mx-2">
+                    </a>
+                </div>       
+            
+                <!--Hampparivalikko button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <!-- Linkit naviin ja hamppariin-->
-                <ul class="navbar-nav">
+                <!--määrittää mitä linkkejä tulee hamppariin-->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Etusivu/index</a>
-                    </li>
+                    <!-- Linkit navigointiin ja hamppariin-->
+                    <ul class="navbar-nav mx-3">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="carusel.html">karuselli</a>
-                    </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="grid.html">ruudukko</a>
-                    </li>
-                    
-                    <!--alasvetovalikko-->
-                    <li class="nav-item dropdown">
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="carusel.html">Albums</a>
+                        </li>
 
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Alasvetovalikko</a>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link nav-active" href="grid.html">Songs</a>
+                        </li>
+                        
+                        <!--alasvetovalikko-->
+                        <li class="nav-item dropdown mx-4">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="kortit.html">Kortit</a></li>
-                                <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
-                                <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
+                                <li><a class="dropdown-item" href="kortit.html">Rap</a></li>
+                                <li><a class="dropdown-item" href="haitari.html">Lorem</a></li>
+                                <li><a class="dropdown-item" href="taulukko.html">Ipsum</a></li>
                             </ul>
-                    </li> 
-                        
-
-                </ul>
-            </div>
-        
-        </div> 
-    </nav> 
- 
-    <!--gridcontainer-->
-    <div class="container p-5 my-5 bg-custom1">
-
-        <!--rainbow grid-->
-        <div class="customcontent1">
-            <h2>Welcome to exposed.fm</h2>
-
-            <p>liityin spotify joskus vuosi, käytän premiumii tässä mun parhaat artistit ja mitä vittua blogi mun spotify käytöst yms yms "henkilökohtianen spotify overview????"</p>
-
-            <p>Oisko ekstra yäppäystä. Nauti salaista infoo spotify sisällöstäni!?</p>
-
-            <a href="haitari.html" class="btn btn-outline-primary"> tsekkaa tää</a>
-
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </nav> 
+   
+        <!--Container header/bannerin sisällölle-->
+        <div class="header-content container p-5 my-5 extra-margin">
+            <h1>Consectetur adipiscing elit sed</h1>
+            <br>
+            <a href="index.html" class="btn btn-outline-banner">Back to Home</a>
         </div>
+    </header>
 
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                <div class="col rainbow-col-1">
+    <main>
+        <!--Gridcontainer-->
+        <div class="container p-5 my-5 bg-custom1">
 
-                    <div class="text-center">
-                        <img src="kuvat/roosa.jpg" class="rounded w-50" alt="...">
-                        <p>Playlist pink Fave song:</p>
+            <!--Grid-->
+            <div class="customcontent1">
+                <h2>Fave songs</h2>
+
+                <p>Favourite songs from some of my own playlists.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac quam id nisi placerat lacinia vel vitae arcu. Duis mollis.</p>
+
+                <a href="index.html" class="btn btn-outline-primary">Back to Home</a>
+            </div>
+
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col rainbow-col-1">
+                        <div class="text-center">
+                            <img src="kuvat/roosa.jpg" class="rounded w-50" alt="...">
+                            <p>Playlist pink</p>
+                            <p>Fave song:</p>
+                            <p>Los Santos by Current Blue</p>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="col rainbow-col-1">
-                    <div class="text-center">
-                        <img src="kuvat/kollane.jpg" class="rounded w-50" alt="...">
-                        <p>Playlist pink Fave song:</p>
+                    <div class="col rainbow-col-1">
+                        <div class="text-center">
+                            <img src="kuvat/kollane.jpg" class="rounded w-50" alt="...">
+                            <p>Playlist yellow</p>
+                            <p>Fave song:</p>
+                            <p>Video Games by Lana Del Rey</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col rainbow-col-1">
-                    <div class="text-center">
-                        <img src="kuvat/punane.jpg" class="rounded w-50" alt="...">
-                        <p>Playlist pink Fave song:</p>
+                    <div class="col rainbow-col-1">
+                        <div class="text-center">
+                            <img src="kuvat/punane.jpg" class="rounded w-50" alt="...">
+                            <p>Playlist red</p>
+                            <p>Fave song:</p>
+                            <p>One Of The Girls by The Weeknd</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col rainbow-col-1">
-                    <div class="text-center">
-                        <img src="kuvat/sinine.jpg" class="rounded w-50" alt="...">
-                        <p>Playlist pink Fave song:</p>
+                    <div class="col rainbow-col-1">
+                        <div class="text-center">
+                            <img src="kuvat/sinine.jpg" class="rounded w-50" alt="...">
+                            <p>Playlist blue</p>
+                            <p>Fave song:</p>
+                            <p>Lover In The Dark by Nevala</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col rainbow-col-1">
-                    <div class="text-center">
-                        <img src="kuvat/roheline.jpg" class="rounded w-50" alt="...">
-                        <p>Playlist pink Fave song:</p>
+                    <div class="col rainbow-col-1">
+                        <div class="text-center">
+                            <img src="kuvat/roheline.jpg" class="rounded w-50" alt="...">
+                            <p>Playlist green</p>
+                            <p>Fave song:</p>
+                            <p>Overcome by Skott</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col rainbow-col-1">
-                    <div class="text-center">
-                        <img src="kuvat/lilla.JPEG" class="rounded w-50" alt="...">
-                        <p>Playlist pink Fave song:</p>
+                    <div class="col rainbow-col-1">
+                        <div class="text-center">
+                            <img src="kuvat/lilla.JPEG" class="rounded w-50" alt="...">
+                            <p>Playlist purple</p>
+                            <p>Fave song:</p>
+                            <p>Family Line by Conan Gray</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
-    </div>
-
     </main>
+
+    <!--sivun FOOTER-->
+    <footer>
+        <div class="container text-center p-3">
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col footeritem">
+                    <a href="https://www.spotify.com"><i class="fa fa-spotify"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a> <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                </div>
+              <div class="col footeritem">
+                    <p class="footertext">Copyright © 2024, Exposed.fm Oy</p>
+              </div>
+              <div class="col footeritem">
+                    <a href="mailto:exposed.fm@gmail.com" class="footerlink">exposed.fm@gmail.com</a>
+              </div>
+            </div>
+        </div>
+    </footer>
 </body>

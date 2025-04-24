@@ -23,7 +23,7 @@ p {
 h1 {
     color:#934aff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.3rem, 5vw, 2.5rem);
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
     font-weight: 800;
     letter-spacing: 2px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
@@ -59,13 +59,17 @@ header {
 
 .nav-link{
     color: rgb(237, 236, 236);
-    
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #934aff;
-    
 }
+
+.nav-active {
+    color: #934aff;
+    font-weight: 600;
+}
+
 
 
 .header-content {
@@ -333,7 +337,6 @@ footer {
         padding-bottom: 20px;
         text-align: center;
     }
-
 
   }
 
