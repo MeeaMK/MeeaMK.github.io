@@ -50,7 +50,7 @@ header {
 /* NAVIGOINTI */
 
 .nav-link{
-    color: #bfbfbf;
+    color: #cbcaca;
 }
 
 .nav-link:hover {
@@ -138,7 +138,6 @@ header {
     border-color: rgb(197, 188, 206);
     max-width: 80vw;
     word-break: break-word;
-    z-index: 100;
 }
 
 .toast-header {
