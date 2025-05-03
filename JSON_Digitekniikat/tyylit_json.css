@@ -1,10 +1,29 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+border: 1px solid black;
+padding: 10px 0;
+}
 
 .nav-link {
 border: 1px solid black;
-color: black;
+padding: 10px 20px;
 text-align: center;
-padding: 10px;
-width: 100%;
+text-decoration: none;
+color: black;
+margin: 5px;
+flex: 1 1 150px; /* makes them equal-width but wrap on small screens */
+max-width: 200px;
 }
 
 .nav-link:hover {
@@ -12,13 +31,8 @@ background-color: black;
 color: white;
 }
 
-.nav-item {
-flex: 1;
-}
-
-@media (min-width: 768px) {
-    .navbar-nav {
-        flex-direction: row;
-        justify-content: center;
-    }
+.content {
+border: 1px solid black;
+margin: 10px;
+padding: 20px;
 }
