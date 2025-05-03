@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fi"> <!--need to be fin???-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Git example</title>
+</head>
+<body>
+    
+    <h1>Maikun JSON testi sivu</h1>
+
+    <div id="vastaus">
+    
+    </div>
+    
+    <script>
+    
+    
+    //funktio joka kirjoittaa haetun datan halutussa muodalla HTML-sivulle
+    
+    function kerro(data){
+    
+    var teksti = "";
+    
+    teksti = "<h1>" + data.yritys + "</h1>";
+    
+    teksti = teksti +"<p>"+"<b>"+"Yhteysteidot" +"</b>"+"<br>"
+    
+    + data.yhteystiedot.puhelin + "<br>"
+    
+    + data.yhteystiedot.email + "</p>";
+    
+    document.getElementById("vastaus").innerHTML = teksti;
+    
+    }
+    
+    
+    //Tähän kirjoita oman JSON tietueesi URL
+    
+    fetch('https://mksarvas.github.io/tico.JSON')
+    
+    
+    // Muunnetaan vastaus JSON muotoon
+    
+    .then(function (response) {
+    
+    return response.json();
+    
+    })
+    
+    
+    //Käsitellään muunnettu (eli JSON muotoinen) vastaus
+    
+    .then(function (responseJson) {
+    
+    // Kutsutaan funktiota ja välitetään sille json-vastaus
+    
+    kerro(responseJson);
+    
+    })
+    
+    
+    // Jos tuli jokin virhe
+    
+    .catch(function (error) {
+    
+    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+    
+    })
+    
+    </script>
+
+</body>
+</html>
