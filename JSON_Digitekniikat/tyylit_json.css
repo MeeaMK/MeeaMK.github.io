@@ -1,38 +1,59 @@
-* {
-box-sizing: border-box;
-}
-
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-}
-
 nav {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-border: 1px solid black;
-padding: 10px 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;   
 }
 
-.nav-link {
-border: 1px solid black;
-padding: 10px 20px;
-text-align: center;
-text-decoration: none;
-color: black;
-margin: 5px;
-flex: 1 1 150px; /* makes them equal-width but wrap on small screens */
-max-width: 200px;
+nav a {
+    background: #ffffff;
+    font-family: otsikot, sans-serif;
+    font-size: 25px;
+    color: #262626;
+    text-decoration: none;
+    padding-bottom: 2px;
+    padding-top: 2px;    
 }
 
-.nav-link:hover {
-background-color: black;
-color: white;
+nav a:hover {
+    background: #373737;
 }
 
-.content {
-border: 1px solid black;
-margin: 10px;
-padding: 20px;
+#valittu:hover {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+#valittu {
+    color: #000000;  
+    text-shadow: 0px 0px 3px #cb0d0d;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    nav {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+/* KONEKOKO - Nav bar - päävalikko */
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 8%;
+        margin-right: 8%;   
+    }
 }
