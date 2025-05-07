@@ -1,3 +1,5 @@
+/* koko sivustoa koskevat tyylit */
+
 * {
     box-sizing: border-box;
 }
@@ -6,6 +8,13 @@ body {
     margin: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
+h4 {
+    font-weight: 400;
+}
+
+
+/* navigaatio tyylit */
 
 nav {
     display: flex;
@@ -22,7 +31,7 @@ nav {
     text-decoration: none;
     color: black;
     margin: 5px;
-    flex: 1 1 150px; /* makes them equal-width but wrap on small screens */
+    flex: 1 1 150px; 
     max-width: 200px;
 }
 
@@ -34,6 +43,9 @@ nav {
 .valittu {
     background-color: rgb(207, 206, 206);
 } 
+
+
+/* main sisältöä */ 
 
 .content {
     border: 1px solid black;
@@ -50,8 +62,4 @@ nav {
 
 #latausaika {
     opacity: 0.5;
-}
-
-h4 {
-    font-weight: 400;
 }
