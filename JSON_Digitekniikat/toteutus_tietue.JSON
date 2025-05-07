@@ -1,15 +1,15 @@
 {
     "otsikko": "Digitekniikat",
     "kuvaus": "Toteutus sisältää digitaalisia tekniikoita käsitteleviä aiheita.",
-    
+    "kuva": "https://meeamk.github.io/JSON_Digitekniikat/konekoodi.jpg",
+
     "osallistujat": {
       "lukumaara": 5,
       "nimet": ["Aino Virtanen", "Mikko Niemi", "Ella Koskinen", "Jari Lehtonen", "Sofia Mäkelä"]
     },
     "toteutus": {
-      "alku": "2025-01-13",
-      "loppu": "2025-03-14",
+      "alku": "13.01.2025",
+      "loppu": "14.03.2025",
       "kesto_viikkoina": 8
-    },
-    "kuva": "https://meeamk.github.io/JSON_Digitekniikat/konekoodi.jpg"
+    }
   }
