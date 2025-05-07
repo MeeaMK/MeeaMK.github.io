@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fi"> <!--need to be fin???-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Digitekniikat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- TARKISTA KÄYTIKS EES bootstrappii ET VARMAA
+    ????????????????????? -->
+
+    <link rel="stylesheet" href="tyylit_json.css">
+</head>
+<body>
+
+    <header> 
+        <nav>
+            <a href="index.html" class="nav-link">Etusivu (Tehtävä 1 OSA 1)</a>
+            <a href="T1osa2.html" class="nav-link">Tehtävä 1 OSA 2</a>
+            <a href="Poke(T2).html" class="nav-link valittu">Poke haku (Tehtävä 2)</a>
+            <a href="T3.html" class="nav-link">Tehtävä 3</a>
+        </nav>
+    </header> 
+    
+    
+
+    <main>
+
+        <div class="content"> <!--tänne kaikki muu content myös-->
+
+            <h1>Pokemon haku</h1>
+            <p>
+                <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+                <button onclick="poke()">Hae</button><br>
+
+                <div id="kaannaPainike"></div>
+                <div id="lisatiedot"></div>
+    
+                <div id="nimi">Kirjoita hakukenttään Pokemonin nimi</div>
+                <p id="kuva2"></p>
+            </p>
+            
+            <p>
+            <h5>Pokemonien nimiä:</h5><br>
+            <ul>
+                <li>Pikachu</li>
+                <li>Jigglypuff</li>
+                <li>Meowth</li>
+                <li>Psyduck</li>
+                <li>Machop</li>
+                <li>Geodude</li>
+                <li>Gengar</li>
+                <li>Mew</li>
+                <li>Eevee</li>
+                <li>Bulbasaur</li>
+                <li>Ivysaur</li>
+                <li>Venusaur</li>
+                <li>Bulbasaur</li>
+                <li>Charmander</li>
+                <li>Squirtle</li>
+            </ul>
+            </p>
+    
+    
+            <script>
+
+                let nykyinenPokemon = null;
+                function poke() {
+                    //Tallennetaan annettu Poken nimi muuttujaan pokeName, muuttetaan se samalla pieniksi kirjaimiksi
+                    const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+                    //Tallennetaan myös nimi talteen muuttujaan name
+                    let name = document.getElementById("pokemonName").value;
+                    //Kutsutaan fetchiä halutun Poken tiedoilla, liitetään saau nimi URL:iin
+                    fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+    
+                        // Muunnetaan vastaus JSON-muotoon  
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
+                        // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+    
+                        .then(function (responseJson) {
+                            pokekuva(responseJson);
+                        })
+                        // Jos tuli jokin virhe 
+    
+                        .catch(function (error) {
+                            document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                        })
+                    function pokekuva(obj) {
+
+                        nykyinenPokemon = obj; // tallennetaan globaalisti
+                        
+                        //Tallennetaan muuttujan linkki josta löytyy Poken kuva    
+                        let pokeurl = obj.sprites.front_default;
+                        //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
+                        document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
+                        document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
+                        document.getElementById("pokemonName").value = "";
+
+                        // Lisätään Käännä -painike
+                        document.getElementById("kaannaPainike").innerHTML = "<button onclick='kaanna()'>Käännä</button><br><br>";
+
+                        // Tyhjennetään lisätiedot jos painetaan uudelleen
+                        document.getElementById("lisatiedot").innerHTML = "";
+                    }
+                }
+
+                function kaanna() {
+                    if (!nykyinenPokemon) return; // tarkistaa onko mitään
+                    let backImg = nykyinenPokemon.sprites.back_default; document.getElementById("kuva2").innerHTML = "<img src='" + backImg + "'>";
+
+                    // Näytetään 3 ominaisuutta
+                    let tiedot = "<ul>";
+                    tiedot += "<li>Pituus: " + nykyinenPokemon.height + "</li>";
+                    tiedot += "<li>Paino: " + nykyinenPokemon.weight + "</li>";
+                    tiedot += "<li>Tyyppi: " + nykyinenPokemon.types[0].type.name + "</li>";
+                    tiedot += "</ul>";
+
+                    document.getElementById("lisatiedot").innerHTML = tiedot;
+
+                    // Tyhjennä hakukenttä
+                    document.getElementById("pokemonName").value = "";
+                }
+
+            </script>
+        </div>
+    </main>
+</body>
+</html>
