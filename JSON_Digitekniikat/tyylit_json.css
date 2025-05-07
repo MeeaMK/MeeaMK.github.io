@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 nav {
@@ -46,4 +46,12 @@ nav {
     height: auto;
     display: block;
     margin: 0 auto; 
+}
+
+#latausaika {
+    opacity: 0.5;
+}
+
+h4 {
+    font-weight: 400;
 }

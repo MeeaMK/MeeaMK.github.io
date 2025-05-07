@@ -27,12 +27,74 @@
     <main>
 
         <div class="content"> <!--tänne kaikki muu content myös-->
+            
+            <div id="kello"></div>
+            <div id="latausaika"></div><br>
+            <div id="vastaus"></div><br>
+            <div id="vastaus2"></div><br>
+            <div id="vastaus3"></div><br>
+            <div id="vastaus4"></div><br>
+            <div><img id="weather-icon" alt="Sääkuvake"></div>
+
+            <script>
+                fetch('https://api.openweathermap.org/data/2.5/weather?id=658225&appid=665ecd56dfc08dbb50feb8b8f5034e28&lang=fi&units=metric')
+
+                // Muunnetaan vastaus JSON-tietue JS Olio muotoon
+                .then(function (response) {
+                        return response.json();
+                    })
+    
+                    //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
+                    // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+    
+                    .then(function (responseJson) {
+                        saa1(responseJson);
+                    })
+    
+                    // Jos tuli jokin virhe 
+    
+                    .catch(function (error) {
+                        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                    })
 
 
+                function saa1(data) {
+                    var teksti = ""; 
+                    teksti = "<h3>Kaupunki:</h3>" + "<h4>" + data.name + "</h4>";
+                    teksti2 = "<h3>Sää:</h3>" + "<h4>" + data.weather[0].description + "</h4>";
+                    teksti3 = "<h3>Lämpötila:</h3>" + "<h4>" + data.main.temp + "&degC" + "</h4>";
+                    teksti4 = "<h3>Tuuli:</h3>" + "<h4>" + data.wind.speed + "&nbspm/s</h4>";
+
+                    // Ikonin URL
+                    var iconCode = data.weather[0].icon;
+                    var iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png `;
+
+                    // Päivitetään kuvan lähde
+                    document.getElementById("weather-icon").src = iconUrl;
+                    // Päivitetään säätiedot sivulle
+                    document.getElementById("vastaus").innerHTML = teksti;
+                    document.getElementById("vastaus2").innerHTML = teksti2;
+                    document.getElementById("vastaus3").innerHTML = teksti3;
+                    document.getElementById("vastaus4").innerHTML = teksti4;
+                }
+
+                // Näyttää kellonajan, jolloin sivu ladattiin
+                const nyt = new Date();
+                const kellonaika = nyt.toLocaleTimeString("fi-FI");
+                document.getElementById("latausaika").innerHTML = "<h4>Sivu ladattu klo: " + kellonaika + "</h4>";
+
+                function paivitaKello() {
+                    const nyt = new Date();
+                    const aika = nyt.toLocaleTimeString("fi-FI");
+                    document.getElementById("kello").innerHTML = "<h4>Kello on: " + aika + "</h4>";
+                }
+
+                // Käynnistä kello ja päivitä se sekunnin välein
+                paivitaKello(); // näytetään heti
+                setInterval(paivitaKello, 1000); // päivitys 1 sekunnin välein
+
+            </script>
         </div>
-
-        
-
     </main>
 </body>
 </html>
