@@ -1,59 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 nav {
-    background: #ffffff;
     display: flex;
-    justify-content: center;   
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px 0;
 }
 
-nav a {
-    background: #ffffff;
-    font-family: otsikot, sans-serif;
-    font-size: 25px;
-    color: #262626;
+.nav-link {
+    border: 1px solid black;
+    padding: 10px 20px;
+    text-align: center;
     text-decoration: none;
-    padding-bottom: 2px;
-    padding-top: 2px;    
+    color: black;
+    margin: 5px;
+    flex: 1 1 150px; /* makes them equal-width but wrap on small screens */
+    max-width: 200px;
 }
 
-nav a:hover {
-    background: #373737;
+.nav-link:hover {
+    background-color: rgb(67, 67, 67);
+    color: white;
 }
 
-#valittu:hover {
-    color: #ffffff;
-    text-shadow: none;
-}
+.valittu {
+    background-color: rgb(207, 206, 206);
+} 
 
-#valittu {
-    color: #000000;  
-    text-shadow: 0px 0px 3px #cb0d0d;
-}
-
-@media (max-width: 600px) {
-
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 600px) {
-
-    nav {
-        flex-direction: column;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-
-/* KONEKOKO - Nav bar - päävalikko */
-    nav {
-        flex-direction: row;
-    }
-
-    nav a {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-left: 8%;
-        margin-right: 8%;   
-    }
+.content {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
 }

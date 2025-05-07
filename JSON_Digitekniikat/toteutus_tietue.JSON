@@ -1,0 +1,14 @@
+{
+    "otsikko": "Digitekniikat",
+    "kuvaus": "Toteutus sisältää digitaalisia tekniikoita käsitteleviä aiheita.",
+    "kuva": "https://käyttäjän-url.github.io/kansiopolku/kuva.png",
+    "osallistujat": {
+      "lukumaara": 5,
+      "nimet": ["Aino Virtanen", "Mikko Niemi", "Ella Koskinen", "Jari Lehtonen", "Sofia Mäkelä"]
+    },
+    "toteutus": {
+      "alku": "2025-01-13",
+      "loppu": "2025-03-14",
+      "kesto_viikkoina": 8
+    }
+  }
