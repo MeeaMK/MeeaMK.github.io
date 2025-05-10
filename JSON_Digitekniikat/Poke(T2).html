@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="fi"> <!--need to be fin???-->
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON Digitekniikat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    
-    <!-- TARKISTA KÄYTIKS EES bootstrappii ET VARMAA
-    ????????????????????? -->
-
     <link rel="stylesheet" href="tyylit_json.css">
 </head>
 <body>
@@ -22,11 +17,10 @@
         </nav>
     </header> 
     
-    
-
     <main>
 
-        <div class="content"> <!--tänne kaikki muu content myös-->
+        <!--laatikko sisällölle-->
+        <div class="content">
 
             <h1>Pokemon haku</h1>
             <p>
@@ -61,15 +55,16 @@
             </ul>
             </p>
     
-    
             <script>
 
                 let nykyinenPokemon = null;
                 function poke() {
                     //Tallennetaan annettu Poken nimi muuttujaan pokeName, muuttetaan se samalla pieniksi kirjaimiksi
                     const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+
                     //Tallennetaan myös nimi talteen muuttujaan name
                     let name = document.getElementById("pokemonName").value;
+
                     //Kutsutaan fetchiä halutun Poken tiedoilla, liitetään saau nimi URL:iin
                     fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
     
@@ -77,23 +72,27 @@
                         .then(function (response) {
                             return response.json();
                         })
+
                         //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
                         // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
     
                         .then(function (responseJson) {
                             pokekuva(responseJson);
                         })
+
                         // Jos tuli jokin virhe 
     
                         .catch(function (error) {
                             document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
                         })
+
                     function pokekuva(obj) {
 
                         nykyinenPokemon = obj; // tallennetaan globaalisti
                         
                         //Tallennetaan muuttujan linkki josta löytyy Poken kuva    
                         let pokeurl = obj.sprites.front_default;
+
                         //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
                         document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
                         document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
@@ -120,7 +119,7 @@
 
                     document.getElementById("lisatiedot").innerHTML = tiedot;
 
-                    // Tyhjennä hakukenttä
+                    // Tyhjentää hakukentän
                     document.getElementById("pokemonName").value = "";
                 }
 
