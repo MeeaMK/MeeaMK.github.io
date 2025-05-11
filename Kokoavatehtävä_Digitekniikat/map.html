@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Location | SingaTrip</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="tyylit.css">
+</head>
+<body>
+
+    <!-- Yläpalkki -->
+    <div class="p-5 bg-primary text-white text-center banner">
+        <h1>Welcome to SingaTrip!</h1>
+        <p>Blog about my trip to Singapore.</p> 
+    </div>
+
+    <!-- Navigaatio -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="visitsg.html">Visit-SG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="map.html">Location</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Pääsisältö -->
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- Vasemman puoleinen sisältö -->
+            <div class="col-sm-4">
+                <h2>About Me</h2>
+                <h5>Photo of me:</h5>
+                <img src="profile.png" alt="pic of pink profile icon" class="custompic1">
+                <p>Student. 21. More about me in culpa qui officia deserunt mollit anim..</p>
+
+                <!-- Linkkejä -->
+                <h3 class="mt-4">Take a look</h3>
+                <p>Information about visiting Singapore and where it's located.</p>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="visitsg.html">Visit-SG</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="map.html">Location</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+
+            <!-- Oikean puoleinen sisältö -->
+            <div class="col-sm-8">
+                <h2>WHERE IS SINGAPORE?</h2>
+                <h5>Country and city-state</h5>
+                <img src="locationSG.jpg" alt="singapore on map and neighbouring countries" class="custompic1">
+                <p>Singapore next to Malaysia and Indonesia.</p>
+                <p>Singapore, is an island country and city-state in Southeast Asia. </p>
+
+                <h2 class="mt-5">CURRENCY OF SINGAPORE</h2>
+                <h5>Remember to exchange cash before trip.</h5>
+                <img src="market.jpg" alt="lively outdoor market in Singapore" class="custompic1">
+                <p>Outdoor market in Singapore.</p>
+                <p>Singapore's currency is SGD aka Singapore Dollars. Here's the current exchange rate:</p>
+
+                <!--lisätään valuuttakurssitieto-->
+                <p id="exchange-rate">Loading exchange rate...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+  // Haetaan valuuttakurssidata exchangerate.host API:sta (SGD -> EUR)
+  fetch('https://api.exchangerate.host/latest?base=SGD&symbols=EUR')
+    .then(response => response.json()) // Muutetaan vastaus JSON-muotoon
+    .then(data => {
+      // Poimitaan EUR-kurssi vastauksesta
+      const rate = data.rates.EUR;
+
+      // Näytetään kurssi HTML-elementissä, jonka id on "exchange-rate"
+      document.getElementById("exchange-rate").innerText =
+        `1 SGD = ${rate.toFixed(2)} EUR`; // Pyöristetään kahteen desimaaliin
+    })
+    .catch(error => {
+      // Jos virhe tapahtuu, näytetään virheilmoitus käyttäjälle
+      document.getElementById("exchange-rate").innerText =
+        "Valuuttakurssia ei voitu ladata.";
+      console.error('Virhe haettaessa valuuttakurssia:', error); // Näytetään virhe konsolissa
+    });
+</script>
+
+    <!-- Footer -->
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+        <p class="footertext">&copy; 2025 SingaTrip by MeeaMK</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p class="footertext">Ota yhteyttä:</p>
+        <a href="mailto:SingaTrip@gmail.com" class="footerlink">SingaTrip@gmail.com</a>
+    </div>
+
+</body>
+</html>
+
+
+<!--map kuva esim mis singapore on tai jos löytyy json tai joku maapallo toiminto
+
++ joku maybe uus tai vanha tai both bootstrap ominaisuus
+
+-->
+

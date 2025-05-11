@@ -1,0 +1,72 @@
+/* TYYLIT */
+
+.banner {
+    background-image: url('SGmain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-shadow: 2px 2px 4px black;
+}
+
+.custompic1 {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: rgb(76, 158, 213);
+}
+
+.nav-pills.flex-column .nav-link {
+  color: #3b85b8;
+}
+
+.nav-pills.flex-column .nav-link.active {
+  background-color: #3b85b8;
+  color: #ffffff;
+}
+
+.nav-pills.flex-column .nav-link:hover {
+  color: #000000;
+  background-color: rgba(59,133,184,0.3);
+}
+
+.nav-pills.flex-column .nav-link.disabled {
+  color: #a0a0a0;
+}
+
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    font-weight: 500;
+}
+
+.footerlink {
+    color: rgb(76, 158, 213);
+}
+
+.footerlink:hover {
+    color: rgb(155, 213, 252);
+}
+
+.footertext {
+    opacity: 0.8;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: rgb(231, 230, 230);
+  background-color: rgb(59,133,184);
+}
+
+.fa:hover {
+    background-color: rgb(155, 213, 252);
+    color: #000000;
+}
