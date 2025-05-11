@@ -97,7 +97,7 @@
 
         .then(data => {
             // Etsitään alue "Singapore" sääennustelistoista
-            const forecast = data.items[0].forecasts.find(f => f.area === "Singapore");
+            const forecast = data.items[0].forecasts.find(f => f.area === "Marina Bay");
 
             // Jos löydetään ennuste, näytetään se sivulla
             if (forecast) {
