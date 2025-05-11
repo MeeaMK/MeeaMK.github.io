@@ -8,9 +8,18 @@
     text-shadow: 2px 2px 4px black;
 }
 
+.btn {
+    background-color: #3b85b8 !important;
+    margin-bottom: 30px;
+}
+
+/* KUVATYYLI */
+
 .custompic1 {
     width: 100%;
 }
+
+/* NAVIGAATIO TYYLIT */
 
 .nav-link:hover {
     color: rgb(76, 158, 213);
@@ -34,6 +43,7 @@
   color: #a0a0a0;
 }
 
+/* LINKIT */
 
 .link {
     text-decoration: none;
@@ -43,11 +53,7 @@
     font-weight: 500;
 }
 
-.btn {
-    background-color: #3b85b8 !important;
-    margin-bottom: 30px;
-}
-
+/* FOOTER TYYLIT */
 
 .footerlink {
     color: rgb(76, 158, 213);
