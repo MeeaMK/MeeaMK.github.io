@@ -89,24 +89,25 @@
     </div>
 
     <script>
-  // Haetaan valuuttakurssidata exchangerate.host API:sta (SGD -> EUR)
-  fetch('https://api.exchangerate.host/latest?base=SGD&symbols=EUR')
-    .then(response => response.json()) // Muutetaan vastaus JSON-muotoon
-    .then(data => {
-      // Poimitaan EUR-kurssi vastauksesta
-      const rate = data.rates.EUR;
+        // Haetaan valuuttakurssidata
+        fetch('https://api.exchangerate.host/latest?base=SGD&symbols=EUR')
 
-      // Näytetään kurssi HTML-elementissä, jonka id on "exchange-rate"
-      document.getElementById("exchange-rate").innerText =
-        `1 SGD = ${rate.toFixed(2)} EUR`; // Pyöristetään kahteen desimaaliin
-    })
-    .catch(error => {
-      // Jos virhe tapahtuu, näytetään virheilmoitus käyttäjälle
-      document.getElementById("exchange-rate").innerText =
-        "Valuuttakurssia ei voitu ladata.";
-      console.error('Virhe haettaessa valuuttakurssia:', error); // Näytetään virhe konsolissa
-    });
-</script>
+        // Muutetaan vastaus JSON-muotoon
+        .then(response => response.json())
+        .then(data => {
+
+        // Poimitaan EUR-kurssi vastauksesta
+        const rate = data.rates.EUR;
+
+        // näytetään HTML:ssä
+        document.getElementById("exchange-rate").innerText = '1 SGD = ${rate.toFixed(2)} EUR';
+        })
+        
+        .catch(error => {
+        // virheen tapahtuessa näytetään virheilmoitus
+        document.getElementById("exchange-rate").innerText = "Valuuttakurssia ei voitu ladata.";
+        });
+    </script>
 
     <!-- Footer -->
     <div class="mt-5 p-4 bg-dark text-white text-center">
