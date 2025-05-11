@@ -82,9 +82,30 @@
                 <img src="merlion.jpg" alt="merlion and marina bay sands hotel" class="custompic1">
                 <p>Merlion is a cutie.</p>
                 <p>SkyPark Observation Deck, Gardens by the Bay and Merlion are a must. Little India, China Town and Siloso beach are definitely worth a visit. If you're extra rich go have fun at Universal Studios Singapore. Don't forget to put aside time to explore the airport (I did [forget] 🥲).</p>
+
+                <h2 class="mt-5">POP QUIZ</h2>
+                <h5>See what you know about Singapore</h5>
+                <img src="skyline.jpg" alt="singapore city ferris wheel and buildings" class="custompic1">
+                <p>Ferris wheel in Singapore.</p>
+
+                <p>How big is Singapore?</p>
+                <!--popover bootstrap elementti-->
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="735.7 km²">Reveal answer</button>
+
+                <p>What is Singapore's population?</p>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="5.918 million (2023)">Reveal answer</button>
+
+                <p>What mix of animals is the Merlion?</p>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Head of a lion and the body of a fish">Reveal answer</button>
             </div>
         </div>
     </div>
+
+    <script>
+        // bootstrapin popover toimivuuden script
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
 
     <!-- Footer -->
     <div class="mt-5 p-4 bg-dark text-white text-center">

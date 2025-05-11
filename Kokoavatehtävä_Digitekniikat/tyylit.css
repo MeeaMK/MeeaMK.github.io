@@ -43,6 +43,12 @@
     font-weight: 500;
 }
 
+.btn {
+    background-color: #3b85b8 !important;
+    margin-bottom: 30px;
+}
+
+
 .footerlink {
     color: rgb(76, 158, 213);
 }
