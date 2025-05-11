@@ -76,36 +76,42 @@
                 <p>Singapore next to Malaysia and Indonesia.</p>
                 <p>Singapore, is an island country and city-state in Southeast Asia. </p>
 
-                <h2 class="mt-5">CURRENCY OF SINGAPORE</h2>
+                <h2 class="mt-5">WEATHER IN SINGAPORE</h2>
                 <h5>Remember to exchange cash before trip.</h5>
                 <img src="market.jpg" alt="lively outdoor market in Singapore" class="custompic1">
                 <p>Outdoor market in Singapore.</p>
                 <p>Singapore's currency is SGD aka Singapore Dollars. Here's the current exchange rate:</p>
 
-                <!--lisätään valuuttakurssitieto-->
-                <p id="exchange-rate">Loading exchange rate...</p>
+                <!--lisätään sää-->
+                <p id="weather">Loading Singapore weather...</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Haetaan valuuttakurssidata
-        fetch('https://api.exchangerate.host/latest?base=SGD&symbols=EUR')
+        // Haetaan Singaporen 2 tunnin sääennuste data.gov.sg-rajapinnasta
+        fetch('https://api.data.gov.sg/v1/environment/2-hour-weather-forecast')
 
         // Muutetaan vastaus JSON-muotoon
         .then(response => response.json())
+
         .then(data => {
+            // Etsitään alue "Singapore" sääennustelistoista
+            const forecast = data.items[0].forecasts.find(f => f.area === "Singapore");
 
-        // Poimitaan EUR-kurssi vastauksesta
-        const rate = data.rates.EUR;
-
-        // näytetään HTML:ssä
-        document.getElementById("exchange-rate").innerText = `1 SGD = ${rate.toFixed(2)} EUR`;
+            // Jos löydetään ennuste, näytetään se sivulla
+            if (forecast) {
+            document.getElementById("weather").innerText = `2 tunnin sääennuste (Singapore): ${forecast.forecast}`;
+            } else {
+            // Jos ei löydy, näytetään varaviesti
+            document.getElementById("weather").innerText = "Sääennustetta ei löytynyt alueelle 'Singapore'.";
+            }
         })
-        
+
+        // Jos tapahtuu virhe (esim. verkko-ongelma), näytetään virheilmoitus
         .catch(error => {
-        // virheen tapahtuessa näytetään virheilmoitus
-        document.getElementById("exchange-rate").innerText = "Couldn't load exchange rate.";
+            document.getElementById("weather").innerText = "Sään hakeminen epäonnistui.";
+            console.error("Virhe haettaessa säätä:", error);
         });
     </script>
 
