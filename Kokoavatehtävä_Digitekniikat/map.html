@@ -100,12 +100,12 @@
         const rate = data.rates.EUR;
 
         // näytetään HTML:ssä
-        document.getElementById("exchange-rate").innerText = '1 SGD = ${rate.toFixed(2)} EUR';
+        document.getElementById("exchange-rate").innerText = `1 SGD = ${rate.toFixed(2)} EUR`;
         })
         
         .catch(error => {
         // virheen tapahtuessa näytetään virheilmoitus
-        document.getElementById("exchange-rate").innerText = "Valuuttakurssia ei voitu ladata.";
+        document.getElementById("exchange-rate").innerText = "Couldn't load exchange rate.";
         });
     </script>
 
