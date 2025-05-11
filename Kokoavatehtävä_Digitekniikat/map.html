@@ -76,43 +76,43 @@
                 <p>Singapore next to Malaysia and Indonesia.</p>
                 <p>Singapore, is an island country and city-state in Southeast Asia. </p>
 
-                <h2 class="mt-5">WEATHER IN SINGAPORE</h2>
+                <h2 class="mt-5">CURRENCY IN SINGAPORE</h2>
                 <h5>Remember to exchange cash before trip.</h5>
                 <img src="market.jpg" alt="lively outdoor market in Singapore" class="custompic1">
                 <p>Outdoor market in Singapore.</p>
                 <p>Singapore's currency is SGD aka Singapore Dollars. Here's the current exchange rate:</p>
 
-                <!--lisätään sää-->
-                <p id="weather">Loading Singapore weather...</p>
+                <!--lisätään valuuttakurssi-->
+                <div id="exchangeRate"></div>
             </div>
         </div>
     </div>
 
     <script>
-        // Haetaan Singaporen 2 tunnin sääennuste data.gov.sg-rajapinnasta
-        fetch('https://api.data.gov.sg/v1/environment/2-hour-weather-forecast')
+        // haetaan sgd valuuttakurssia
+        fetch("https://api.frankfurter.dev/v1/latest?symbols=SGD")
 
-        // Muutetaan vastaus JSON-muotoon
-        .then(response => response.json())
+            .then(response => {
+                // tarkistetaan API pyynnön onnistuminen
+                if (!response.ok) {
+                    throw new Error('API-pyyntö epäonnistui');
+                }
+                return response.json(); // palautetaan JSON-vastaus
+            })
 
-        .then(data => {
-            // Etsitään alue "Singapore" sääennustelistoista
-            const forecast = data.items[0].forecasts.find(f => f.area === "Marina Bay");
+            // haetaan sgd arvoa ja lisätään HTML elementtiin
+            .then(data => {
+                const exchangeRate = data.rates.SGD;
+                const exchangeRateHTML = `<p>1 EUR = ${exchangeRate} SGD</p>`;
 
-            // Jos löydetään ennuste, näytetään se sivulla
-            if (forecast) {
-            document.getElementById("weather").innerText = `2 tunnin sääennuste (Singapore): ${forecast.forecast}`;
-            } else {
-            // Jos ei löydy, näytetään varaviesti
-            document.getElementById("weather").innerText = "Sääennustetta ei löytynyt alueelle 'Singapore'.";
-            }
-        })
+                document.getElementById('exchangeRate').innerHTML = exchangeRateHTML;
+            })
 
-        // Jos tapahtuu virhe (esim. verkko-ongelma), näytetään virheilmoitus
-        .catch(error => {
-            document.getElementById("weather").innerText = "Sään hakeminen epäonnistui.";
-            console.error("Virhe haettaessa säätä:", error);
-        });
+            // ilmoitukset virheen tapahtuessa
+            .catch(error => {
+                console.error('Virhe haettaessa valuuttakurssia:', error);
+                document.getElementById('exchangeRate').innerHTML = "<p>Valuuttakurssin hakeminen epäonnistui.</p>";
+            });
     </script>
 
     <!-- Footer -->
