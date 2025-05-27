@@ -69,22 +69,21 @@
     <p>© 2025 Etelä-Savon Nuohouspalvelu</p>
   </footer>
 
- <script>
-    const dropdownButton = document.querySelector('.dropbtn');
+  <script>
     const dropdownContent = document.querySelector('.dropdown-content');
     const dropdownLinks = document.querySelectorAll('.dropdown-content a');
 
-    dropdownButton.addEventListener('click', () => {
-      dropdownContent.classList.toggle('active');
-    });
-
     dropdownLinks.forEach(link => {
       link.addEventListener('click', () => {
-        setTimeout(() => {
-          dropdownContent.classList.remove('active');
-          dropdownButton.blur();
-      }, 100);
+        // piilottaa dropdown sisällön
+        dropdownContent.style.display = 'none';
       });
+    });
+
+    const dropdownButton = document.querySelector('.dropbtn');
+    dropdownButton.addEventListener('click', () => {
+      const isVisible = dropdownContent.style.display === 'block';
+      dropdownContent.style.display = isVisible ? 'none' : 'block';
     });
   </script>
 
