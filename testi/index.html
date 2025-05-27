@@ -45,7 +45,7 @@
   <main>
     <div class="customcontent">
       <h1>Tervetuloa Etelä-Savon Nuohouspalvelun kotisivuille!</h1>
-      <p>Täältä löydät tietoa palveluistamme. yms</p>
+      <p>Täältä löydät tietoa palveluistamme. 123</p>
 
       <div class="customcontent2">
         <img src="välineet.webp" alt="päivitä tänne alt" class="customimage">
@@ -119,22 +119,18 @@
   </footer>
 
   <script>
-    const dropdownButton = document.querySelector('.dropbtn');
+    // Get dropdown content and all links inside it
     const dropdownContent = document.querySelector('.dropdown-content');
     const dropdownLinks = document.querySelectorAll('.dropdown-content a');
 
-    dropdownButton.addEventListener('click', () => {
-      dropdownContent.classList.toggle('active');
-    });
-
     dropdownLinks.forEach(link => {
       link.addEventListener('click', () => {
-        setTimeout(() => {
-          dropdownContent.classList.remove('active');
-          dropdownButton.blur();
-      }, 100);
+        // Hide the dropdown content
+        dropdownContent.style.display = 'none';
       });
     });
+
+   
   </script>
 
 </body>
