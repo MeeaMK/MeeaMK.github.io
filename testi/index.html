@@ -117,6 +117,27 @@
   <footer>
     <p>© 2025 Etelä-Savon Nuohouspalvelu</p>
   </footer>
+
+  <script>
+    // Get dropdown content and all links inside it
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Hide the dropdown content
+        dropdownContent.style.display = 'none';
+      });
+    });
+
+    // Optional: toggle dropdown open when button is clicked
+    const dropdownButton = document.querySelector('.dropbtn');
+    dropdownButton.addEventListener('click', () => {
+      const isVisible = dropdownContent.style.display === 'block';
+      dropdownContent.style.display = isVisible ? 'none' : 'block';
+    });
+  </script>
+
 </body>
 </html>
 </html>
