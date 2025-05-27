@@ -1,0 +1,311 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 170px;
+  background: #f8f8f8;
+  color: #222;
+  line-height: 1.6;
+  text-align: center;
+  background-image: url("brickdark.jpg");
+}
+  
+a {
+  color: #333;
+  text-decoration: none;
+}
+  
+a:hover {
+  text-decoration: underline;
+}
+  
+/* Navigaatio */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+  
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  max-width: 100px !important;
+  height: auto;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+  
+/* Osa-alueet */
+
+.customimage {
+  width: 50%;
+  flex: 1;
+}
+
+.customcontent {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.customcontent2 {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.palvelusisältö {
+  flex: 1;
+}
+
+#palvelut {
+  scroll-margin-top: 8.75rem;
+  margin-top: 0;
+}
+  
+/* Otsikot */
+h2 {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Palvelut-lista */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+li {
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+}
+
+/* Hinnasto */
+
+table {
+  border-collapse: collapse;
+  width: 80%;             /* Or use auto, fit-content, etc. */
+  margin: 0 auto;         /* Center the table */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+#hinnasto {
+  scroll-margin-top: 8.75rem;
+}
+  
+/* Yhteystiedot */
+section p {
+  margin: 0.5rem 0;
+}
+
+/* Lomake */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fefefe;
+  color: #222;
+}
+  
+button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+  
+button:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  background: #f0f0f0;
+  color: #555;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* DROPDOWN BTN */
+
+.dropbtn {
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+
+.dropbtn .bar {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 100vw;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* PUHELINKOKO */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .logo-link {
+    margin-bottom: 1rem;
+  }
+
+  .logo-link {
+  order: 1; /* make logo first */
+  flex-basis: 100%; /* full width on small screens */
+  display: flex;
+  justify-content: center;
+  }
+  
+  .nav-left {
+    order: 2;
+  }
+
+  .nav-right {
+    order: 3;
+  }
+  .dropdown {
+      display: inline-block;
+  }
+
+  .customcontent2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  #hinnasto {
+    scroll-margin-top: 12.5rem;
+  }
+
+  #palvelut {
+    scroll-margin-top: 12.5rem;
+  }
+}
+
+
+/* PUHELIN KOOSTA SUUREMMAT */
+
+@media(min-width: 769px) {
+  .dropdown {
+    display: none;
+  }
+
+}
+

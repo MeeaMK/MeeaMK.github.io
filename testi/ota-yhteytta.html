@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Etelä-Savon Nuohouspalvelu - Ota yhteyttä</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="nav-link">Etusivu</a>
+        <a href="index.html#palvelut" class="nav-link">Palvelumme</a>
+        <a href="index.html#hinnasto" class="nav-link">Hinnasto</a>
+      </div>
+
+      <a href="index.html" class="logo-link">
+        <img src="logoympyrä.png" alt="Etelä-Savon Nuohouspalvelu logo" class="logo">
+      </a>
+
+      <div class="nav-right">
+        <a href="index.html#ajanvaraus" class="nav-link">Ajanvaraus</a>
+        <a href="ota-yhteytta.html" class="nav-link">Ota yhteyttä</a>
+      </div>
+    </nav>
+
+    <div class="dropdown">
+      <button class="dropbtn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="dropdown-content">
+        <a href="index.html">Etusivu</a>
+        <a href="index.html#palvelut">Palvelumme</a>
+        <a href="index.html#hinnasto" class="nav-link">Hinnasto</a>
+        <a href="index.html#ajanvaraus">Ajanvaraus</a>
+        <a href="ota-yhteytta.html">Ota yhteyttä</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="customcontent">
+      <h1>Yhteystiedot</h1>
+      <p><strong>Puhelin:</strong> <a href="tel:0413129574">041 312 9574</a></p>
+      <p><strong>Sähköposti:</strong> <a href="mailto:etelasavonnuohouspalvelu@gmail.com">etelasavonnuohouspalvelu@gmail.com</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/" target="_blank">Etelä-Savon Nuohouspalvelu Facebookissa</a></p>
+
+      <h2>Ota yhteyttä</h2>
+
+      <form action="mailto:miikene803@gmail.com" method="post" enctype="text/plain">
+        <label for="nimi">Nimi:</label>
+        <input type="text" id="nimi" name="nimi" required placeholder="Etu- ja sukunimesi" />
+
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" required placeholder="Sähköpostisi" />
+
+        <label for="viesti">Viesti:</label>
+        <textarea id="viesti" name="viesti" rows="5" required placeholder="Kerro tarvitsemasi palvelu tai kysy hinnoista."></textarea>
+
+        <button type="submit">Lähetä</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Etelä-Savon Nuohouspalvelu</p>
+  </footer>
+</body>
+</html>
