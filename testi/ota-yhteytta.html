@@ -80,8 +80,10 @@
 
     dropdownLinks.forEach(link => {
       link.addEventListener('click', () => {
-        dropdownContent.classList.remove('active');
-        dropdownButton.blur();
+        setTimeout(() => {
+          dropdownContent.classList.remove('active');
+          dropdownButton.blur();
+      }, 100);
       });
     });
   </script>
