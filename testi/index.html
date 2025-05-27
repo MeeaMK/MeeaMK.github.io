@@ -119,22 +119,16 @@
   </footer>
 
   <script>
-    // Get dropdown content and all links inside it
     const dropdownContent = document.querySelector('.dropdown-content');
     const dropdownLinks = document.querySelectorAll('.dropdown-content a');
-
+    const dropdownButton = document.querySelector('.dropbtn');
+    
     dropdownLinks.forEach(link => {
       link.addEventListener('click', () => {
-        // Hide the dropdown content
+        // piilottaa dropdown-content laatikon
         dropdownContent.style.display = 'none';
+        dropdownButton.blur();
       });
-    });
-
-    // Optional: toggle dropdown open when button is clicked
-    const dropdownButton = document.querySelector('.dropbtn');
-    dropdownButton.addEventListener('click', () => {
-      const isVisible = dropdownContent.style.display === 'block';
-      dropdownContent.style.display = isVisible ? 'none' : 'block';
     });
   </script>
 
