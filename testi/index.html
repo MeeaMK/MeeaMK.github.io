@@ -119,14 +119,17 @@
   </footer>
 
   <script>
+    const dropdownButton = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
     const dropdownLinks = document.querySelectorAll('.dropdown-content a');
-    const dropdownButton = document.querySelector('.dropbtn');
-    
+
+    dropdownButton.addEventListener('click', () => {
+      dropdownContent.classList.toggle('active');
+    });
+
     dropdownLinks.forEach(link => {
       link.addEventListener('click', () => {
-        // piilottaa dropdown-content laatikon
-        dropdownContent.style.display = 'none';
+        dropdownContent.classList.remove('active');
         dropdownButton.blur();
       });
     });
