@@ -72,7 +72,13 @@ nav a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-  
+
+#valittu {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #c53f3f;
+}
+
 /* Osa-alueet */
 
 .customimage {
@@ -268,8 +274,8 @@ footer {
   }
 
   .logo-link {
-  order: 1; /* make logo first */
-  flex-basis: 100%; /* full width on small screens */
+  order: 1;
+  flex-basis: 100%;
   display: flex;
   justify-content: center;
   }
