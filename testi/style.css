@@ -29,6 +29,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: fit-content;
   z-index: 1000;
   background: #333;
   color: #fff;
@@ -38,20 +39,30 @@ header {
   
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: center; /* keskittää nav-center */
+  position: relative;
+  height: 100px;
+  background-color: #333;
+  color: white;
 }
 
-.nav-left,
-.nav-right {
+.nav-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.nav-main {
+  display: flex;
+  gap: 2rem;
 }
 
 .logo {
-  max-width: 100px !important;
+  max-width: 115px !important;
   height: auto;
 }
 
@@ -59,8 +70,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  padding-right: 5rem;
 }
-  
+
 nav a {
   margin: 0 15px;
   color: #fff;
@@ -82,13 +95,12 @@ nav a:hover {
 /* Osa-alueet */
 
 .customimage {
-  width: 50%;
   flex: 1;
 }
 
 .customcontent {
   padding: 2rem 1rem;
-  max-width: 800px;
+  max-width: 70%;
   margin: 0 auto;
   margin-top: 2rem;
   background: rgba(255, 255, 255, 0.9);
@@ -101,7 +113,7 @@ nav a:hover {
   gap: 2rem;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .palvelusisältö {
@@ -111,6 +123,10 @@ nav a:hover {
 #palvelut {
   scroll-margin-top: 8.75rem;
   margin-top: 0;
+}
+
+.hinnastosisältö {
+  margin-top: 40px;
 }
   
 /* Otsikot */
@@ -155,6 +171,10 @@ section p {
 }
 
 /* Lomake */
+.customform {
+  margin-top: 50px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -164,6 +184,7 @@ form {
 }
 
 input, textarea {
+  font-family: inherit;
   width: 100%;
   max-width: 500px;
   padding: 0.7rem;
@@ -254,62 +275,92 @@ footer {
 }
 
 
-/* PUHELINKOKO */
+/* PUHELIN (ja tabletti) KOKO */
 
-@media (max-width: 768px) {
+@media (max-width: 1090px) {
+
+  body {
+    padding-top: 250px;
+  }
+  
   nav {
     flex-direction: column;
     align-items: center;
+    height: 145px;
   }
 
-  .nav-left,
-  .nav-right {
+  .nav-main {
     flex-direction: column;
     align-items: center;
     display: none;
   }
 
-  .logo-link {
-    margin-bottom: 1rem;
+  .nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 100%;
+    padding: 0;
   }
 
   .logo-link {
-  order: 1;
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
+    padding: 0;
   }
   
-  .nav-left {
-    order: 2;
-  }
-
-  .nav-right {
-    order: 3;
-  }
   .dropdown {
       display: inline-block;
+  }
+
+  .customcontent {
+    max-width: 100%;
   }
 
   .customcontent2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3rem;
+  }
+
+  .customimage {
+    width: 80%;
+  }
+
+  table {
+    width: 95%;
   }
  
   #hinnasto {
-    scroll-margin-top: 12.5rem;
+    scroll-margin-top: 15.5rem;
   }
 
   #palvelut {
-    scroll-margin-top: 12.5rem;
+    scroll-margin-top: 15.5rem;
+  }
+}
+
+/* VAIN TABLETTI KOKO */
+
+@media(min-width: 590px) {
+
+  .customcontent {
+    max-width: 80%;
+  }
+  .customimage {
+    width: 50%;
+  }
+
+  table {
+    width: 80%;
   }
 }
 
 
-/* PUHELIN KOOSTA SUUREMMAT */
 
-@media(min-width: 769px) {
+/* PUHELIN ja TABLETTI KOOSTA SUUREMMAT */
+
+@media(min-width: 1090px) {
   .dropdown {
     display: none;
   }
