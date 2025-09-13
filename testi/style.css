@@ -98,6 +98,15 @@ nav a:hover {
   flex: 1;
 }
 
+.customimage2 {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.customimage3 {
+  width: 40% !important;
+}
+
 .customcontent {
   padding: 2rem 1rem;
   max-width: 70%;
@@ -109,6 +118,14 @@ nav a:hover {
 }
 
 .customcontent2 {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.customcontent3 {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
@@ -129,6 +146,14 @@ nav a:hover {
   margin-top: 40px;
 }
 
+.ennenkuvat {
+  flex: 1;
+}
+
+.jälkeenkuvat {
+  flex: 1;
+}
+
 .customlink {
   text-decoration: underline;
 }
@@ -141,6 +166,12 @@ nav a:hover {
 h2 {
   color: #444;
   margin-bottom: 1rem;
+}
+
+h3 {
+  color: #444;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 /* Palvelut-lista */
@@ -285,39 +316,10 @@ footer {
 
 /* PUHELIN (ja tabletti) KOKO */
 
-@media (max-width: 1090px) {
+@media (max-width: 1000px) {
 
   body {
     padding-top: 250px;
-  }
-  
-  nav {
-    flex-direction: column;
-    align-items: center;
-    height: 145px;
-  }
-
-  .nav-main {
-    flex-direction: column;
-    align-items: center;
-    display: none;
-  }
-
-  .nav-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    order: 1;
-    width: 100%;
-    padding: 0;
-  }
-
-  .logo-link {
-    padding: 0;
-  }
-  
-  .dropdown {
-    display: inline-block;
   }
 
   .customcontent {
@@ -331,8 +333,24 @@ footer {
     gap: 3rem;
   }
 
+  .customcontent3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
   .customimage {
-    width: 80%;
+    width: 100%;
+  }
+
+  .customimage2 {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  }
+
+  .customimage3 {
+  width: 80%;
   }
 
   table {
@@ -359,17 +377,68 @@ footer {
     width: 50%;
   }
 
+  .customimage2 {
+  width: 70%;
+  margin-bottom: 0.5rem;
+  }
+
+  .customimage3 {
+  width: 60%;
+  }
+
   table {
     width: 80%;
   }
 }
 
-/* PUHELIN ja TABLETTI KOOSTA SUUREMMAT */
+/* Navigaatio eri kokoissa */
 
-@media(min-width: 1090px) {
+@media(min-width: 1190px) {
 
   .dropdown {
     display: none;
   }
 }
 
+@media(max-width: 1190px) {
+
+  body {
+    padding-top: 250px;
+  }
+
+  .dropdown {
+    display: inline-block;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: 145px;
+  }
+
+  .nav-main {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 100%;
+    padding: 0;
+  }
+
+  .logo-link {
+    padding: 0;
+  }
+
+    #hinnasto {
+    scroll-margin-top: 15.5rem;
+  }
+
+  #palvelut {
+    scroll-margin-top: 15.5rem;
+  }
+}
