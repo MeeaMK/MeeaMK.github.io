@@ -104,7 +104,7 @@ nav a:hover {
 }
 
 .customimage3 {
-  width: 40% !important;
+  width: 40%;
 }
 
 .customcontent {
@@ -249,8 +249,7 @@ button:hover {
   background: #555;
 }
 
-/* FOOTER */
-
+/* Footer */
 footer {
   background: #f0f0f0;
   color: #555;
@@ -351,7 +350,7 @@ footer {
   }
 
   .customimage3 {
-  width: 80%;
+    width: 100%;
   }
 
   table {
@@ -379,12 +378,12 @@ footer {
   }
 
   .customimage2 {
-  width: 70%;
-  margin-bottom: 0.5rem;
+    width: 70%;
+    margin-bottom: 0.5rem;
   }
 
   .customimage3 {
-  width: 60%;
+    width: 60%;
   }
 
   table {
