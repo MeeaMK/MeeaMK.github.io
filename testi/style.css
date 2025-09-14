@@ -103,10 +103,6 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-.customimage3 {
-  width: 40%;
-}
-
 .customcontent {
   padding: 2rem 1rem;
   max-width: 70%;
@@ -388,6 +384,14 @@ footer {
 
   table {
     width: 80%;
+  }
+}
+
+/* vain kone */
+
+@media(min-width: 1000px) {
+  .customimage3 {
+    width: 40%;
   }
 }
 
